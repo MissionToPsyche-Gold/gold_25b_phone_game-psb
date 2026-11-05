@@ -1,0 +1,147 @@
+[
+	{
+		"id" : 100,
+		"question" : "When was the asteroid Psyche discovered?",
+		"correct answer" : 3,
+		"answers" : ["1509", "1968", "2023", "1852"],
+		"explanation" : "The asteroid Psyche was discovered in 1852 and has been studied from afar ever since"
+	},
+	{
+		"id" : 101,
+		"question" : "Who discovered the asteroid Psyche?",
+		"correct answer" : 0,
+		"answers" : ["Annibale de Gasparis", "Galileo Galilei", "Isaac Newton", "Neil deGrasse Tyson"],
+		"explanation" : "The asteroid Psyche was discovered in 1852 by Italian astronomer Annibale de Gasparis"
+	},
+	{
+		"id" : 102,
+		"question" : "What is the likely composition of Psyche?",
+		"correct answer" : 1,
+		"answers" : ["Rock and ice", "Rock and metal", "ice and metal", "Rock, metal, and ice"],
+		"explanation" : "Psyche is likely a mixture of rock and metal, with metal making up between 30% to 60% of its volume"
+	},
+	{
+		"id" : 103,
+		"question" : "What is the pioneering technology demonstration attatched to the side of the Psyche spacecraft?",
+		"correct answer" : 2,
+		"answers" : ["Multispectral Imager", "Magnetrometer", "Deep Space Optical Communications (DSOC)", "Magnetrometer"],
+		"explanation" : "DSOC is NASA's first test of high-bandwidth optical communications between Earth and distances far excceeding the Moon"
+	},
+	{
+		"id" : 104,
+		"question" : "What food is Psyche shaped like?",
+		"correct answer" : 2,
+		"answers" : ["Pizza", "Orange", "Potato", "Walnut"],
+		"explanation" : "Psyche has an irregular potato shape"
+	},
+	{
+		"id" : 105,
+		"question" : "When is/was the Psyche spacecraft expected to reach the Psyche asteroid?",
+		"correct answer" : 2,
+		"answers" : ["October 2023", "November 2031", "July 2029", "May 2026"],
+		"explanation" : "If all goes to plan, the asteroid Psyche's gracity will capture the spacecraft in Late July 2029"
+	},
+	{
+		"id" : 106,
+		"question" : "Which is NOT a science objective of Psyche?",
+		"correct answer" : 3,
+		"answers" : ["Chracterize Psyche's topography", "Determine how Psyche was formed", 
+							"Determine if Psyche is a planetary core or unmelted material", "Determine how fast Psyche moves through space"],
+		"explanation" : "Scientific  objectives in Psyche include determining topography, how it was formed, and determining if it's a planetary core, but not about it's movement through space"
+	},
+	{
+		"id" : 107,
+		"question" : "What is the purpose of the Multispectral Imager?",
+		"correct answer" : 1,
+		"answers" : ["Detect emmisions of neutron and gamma rays to determine what Psyche is made of", 
+							"Take pictures in different wavelengths of light to learn about the mineral composition fo Psyche",
+							"Look for evidence of an ancient magnetic field", 
+							"Send commands to and receive data from the spacecraft to conduct gravity science"],
+		"explanation" : "The Multispectral Imager consists of a pair of identical cameras equipped with filters and telescopic lenses to photograph the surface of the asteroid to learn about the mineral composition of Psyche"
+	},
+	{
+		"id" : 108,
+		"question" : "What is the purpose of the Gamma-Ray and Neutron Spectrometer?",
+		"correct answer" : 0,
+		"answers" : ["Detect emmisions of neutron and gamma rays to determine what Psyche is made of",
+					"Take pictures in different wavelengths of light to learn about the mineral composition fo Psyche", 
+					"Look for evidence of an ancient magnetic field", 
+					"Send commands to and receive data from the spacecraft to conduct gravity science"],
+		"explanation" : "the Gamma-Ray and Neutron Spectrometer help scientists determine the chemical elements that make up the asteroid's surface material"
+	},
+	{
+		"id" : 109,
+		"question" : "What is the purpose of the Magnetometor?",
+		"correct answer" : 2,
+		"answers" : ["Take pictures in different wavelengths of light to learn about the mineral composition fo Psyche", 
+					"Detect emmisions of neutron and gamma rays to determine what Psyche is made of", 
+					"Look for evidence of an ancient magnetic field",
+					"Send commands to and receive data from the spacecraft to conduct gravity science"],
+		"explanation" : "The magnetometer will detect an intrinsic field around the asteroid from remanent or residual magnetization"
+	},
+	{
+		"id" : 110,
+		"question" : "What is the purpose of the X-band radio raves?",
+		"correct answer" : 1,
+		"answers" : ["Take pictures in different wavelengths of light to learn about the mineral composition fo Psyche", 
+					"Send commands to and receive data from the spacecraft to conduct gravity science",
+					"Detect emmisions of neutron and gamma rays to determine what Psyche is made of", 
+					"Look for evidence of an ancient magnetic field"],
+		"explanation" : "By analyzing X-band radio waves scientists can measure how Psyche affects the spacecraft's orbit"
+	}, 
+	{
+		"id" : 111,
+		"question" : "What is another word for Optical communications?",
+		"correct answer" : 0,
+		"answers" : ["Laser communications", 
+					"Radio communications",
+					"Satellite communications", 
+					"Cellular communications"],
+		"explanation" : "By analyzing X-band radio waves scientists can measure how Psyche affects the spacecraft's orbit"
+	},
+	{
+		"id" : 112,
+		"question" : "Where is the asteroid belt that Psyche is located?",
+		"correct answer" : 3,
+		"answers" : ["Between Earth and Mars", 
+					"Between Jupiter and Saturn",
+					"Between Saturn and Uranus", 
+					"Between Mars and Jupiter"],
+		"explanation" : "The asteroid belt is located in the main asteroid belt between Mars and Jupiter"
+	},
+	{
+		"id" : 113,
+		"question" : "What is the approxiamate size of the Psyche spacecraft?",
+		"correct answer" : 1,
+		"answers" : ["A football field including endzones", 
+					"A singles tennis court",
+					"The Mall of America", 
+					"Three school buses"],
+		"explanation" : "The full flight system is 81 ft long by 24 ft wide, making it about the size of a singles tennis court"
+	},
+	{
+		"id" : 114,
+		"question" : "What powers everything on board the Psyche spacecraft?",
+		"correct answer" : 3,
+		"answers" : ["Methane gas", 
+					"Two 20kW battery pack",
+					"A fuel-battery hybrid system", 
+					"Two solar arrays"],
+		"explanation" : "Two five-panel cross shaped solar arrays power everything on board, including the science instruments"
+	}, 
+	{
+		"id" : 115,
+		"question" : "When is/was the Psyche spacecraft expected to launch?",
+		"correct answer" : 1,
+		"answers" : ["October 2023", "November 2031", "July 2029", "May 2018"],
+		"explanation" : "The Psyche spacecraft launched October 13, 2023 from Kennedy Space Center in Florida"
+	},
+	{
+		"id" : 116,
+		"question" : "Why is Psyche sometimes referred to as 16 Psyche?",
+		"correct answer" : 2,
+		"answers" : ["Becuase it is approxiamately 16 miles long", "Becuase it is about 16% metal", 
+					"July 2029", "May 2026"],
+		"explanation" : "If all goes to plan, the asteroid Psyche's gracity will capture the spacecraft in Late July 2029"
+	}
+]

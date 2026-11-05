@@ -6,44 +6,49 @@ extends Node
 ##   - never repeats a question within a session (UF-5, SF09, SF10)
 ##   - forgets used questions when GameState starts a new session
 
-const QUESTIONS_PATH := "res://data/sample_questions.json"
+const QUESTIONS_PATH := "res://data/trivia.json"
 
 var questions: Array = []
-var _used := {}
-
 
 func _ready() -> void:
-	questions = _load()
+	_load()
 	GameState.state_changed.connect(func():
 		if GameState.phase == "setup":
-			_used.clear())
+			questions.clear()
+			_load())
 
 
 ## Returns {} when every question has been used.
-func next_question() -> Dictionary:
-	var pool := questions.filter(func(q): return not _used.has(q.id))
+func next_question() -> TriviaQuestion:
+	var pool := questions.filter(func(q): return not q._used())
 	if pool.is_empty():
-		return {}
-	var q: Dictionary = pool.pick_random()
-	_used[q.id] = true
+		return 
+	var q: TriviaQuestion = pool.pick_random()
+	q.set_used()
 	return q
 
 
 func _load() -> Array:
 	var f := FileAccess.open(QUESTIONS_PATH, FileAccess.READ)
+	
 	if f == null:
 		push_error("QuestionBank: can't open " + QUESTIONS_PATH)
 		return []
-	var data = JSON.parse_string(f.get_as_text())
-	var out: Array = []
-	if not data is Dictionary:
+		
+	var text = f.get_as_text()
+	f.close()
+	
+	var json = JSON.new()
+	var error = json.parse(text)
+	
+	if error != OK:
 		push_error("QuestionBank: invalid JSON in " + QUESTIONS_PATH)
-		return out
-	for q in data.get("questions", []):
-		if q is Dictionary and q.has("id") and str(q.get("question", "")).strip_edges() != "" \
-				and q.get("choices", []) is Array and q.choices.size() == 4 \
-				and int(q.get("correct_index", -1)) in [0, 1, 2, 3]:
-			out.append(q)
-		else:
-			push_warning("QuestionBank: skipped invalid question %s" % str(q.get("id", "?")))
-	return out
+		return questions
+
+	var data: Array = json.data
+
+	for question in data:
+		var trivia_question = TriviaQuestion.new(question)
+		questions.append(trivia_question)
+		
+	return questions

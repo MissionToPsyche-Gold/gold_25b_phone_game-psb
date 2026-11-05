@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://dl0x01tn7fcgd"]
 
-[ext_resource type="Script" path="res://scripts/scenes/trivia_scene.gd" id="1"]
+[ext_resource type="Script" uid="uid://vytunykoxfj6" path="res://scripts/scenes/trivia_scene.gd" id="1"]
 
-[node name="Trivia" type="Control"]
+[node name="Trivia" type="Control" unique_id=1857333315]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
