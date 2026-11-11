@@ -7,24 +7,82 @@ signal time_changed(remaining: float, total: float)
 
 const TIME_LIMIT := 30.0   # seconds (report SF16)
 
-# Maze itself layout for demo. Row length constant. s = start, # = wall, o = path, e = end
 
-const MAZELAYOUT :=[
-	"#################",
-	"#soooooooooooooo#",
-	"#o#####o#######o#",
-	"#o#ooooooooo#ooo#",
-	"###o###o###o#o###",
-	"#o#o#o#ooo#o#ooo#",
-	"#o###o#o#o#o#####",
-	"#ooooooo#o#o#ooo#",
-	"#####o#o#o#o#o###",
-	"#o#ooo#o#o#o#ooo#",
-	"#o#o###########o#",
-	"#ooooooo#ooooooo#",
-	"#####o#o#####o#o#",
-	"#ooooo#ooooooo#e#",
-	"#################",
+# Maze presets, randomly pick a preset according to difficulty/round
+
+const EASY_MAZES := [
+	[
+		"#########",
+		"#soooooo#",
+		"#######o#",
+		"#ooo#ooo#",
+		"#o###o###",
+		"#ooooooe#",
+		"#########",
+	],
+	[
+		"#########",
+		"#soo#ooo#",
+		"###o#o#o#",
+		"#o#ooo#o#",
+		"#o#####o#",
+		"#ooooooe#",
+		"#########",
+	],
+]
+
+const MEDIUM_MAZES := [
+	[
+		"###########",
+		"#soo#ooo#o#",
+		"###o#o#o#o#",
+		"#o#ooo#ooo#",
+		"#o#######o#",
+		"#ooo#ooooo#",
+		"#o###o#####",
+		"#ooooooooe#",
+		"###########",
+	],
+	[
+		"###########",
+		"#s#ooooooo#",
+		"#o###o###o#",
+		"#o#ooo#ooo#",
+		"#o#o###o###",
+		"#ooo#o#o#o#",
+		"#####o#o#o#",
+		"#ooooooooe#",
+		"###########",
+	],
+]
+
+const HARD_MAZES := [
+	[
+		"#############",
+		"#soooo#o#ooo#",
+		"#####o#o#o#o#",
+		"#ooo#o#ooo#o#",
+		"#o#o#o#####o#",
+		"#o#ooo#ooooo#",
+		"#o#####o###o#",
+		"#o#ooooo#o#o#",
+		"#o###o###o#o#",
+		"#ooooo#ooooe#",
+		"#############",
+	],
+	[
+		"#############",
+		"#soo#ooo#ooo#",
+		"###o#o#o###o#",
+		"#ooo#o#ooo#o#",
+		"#o###o###o#o#",
+		"#ooooo#ooo#o#",
+		"#######o###o#",
+		"#ooooo#o#ooo#",
+		"#o#####o###o#",
+		"#ooooooooooe#",
+		"#############",
+	],
 ]
 
 const ARROW_BUTTONS_HEIGHT := 130.0
@@ -46,22 +104,28 @@ var _start := Vector2i.ZERO # start position
 var _endgoal := Vector2i.ZERO # end position
 var _player := Vector2i.ZERO # player position
 
+var testing_hotkeys: bool = true
+var maze_seed: int = 0
+
+var _layout: Array = []
+var _random := RandomNumberGenerator.new()
 
 func _ready() -> void:
 	# Build or set up your maze here: grid, walls, player, goal, arrow buttons.
+	_choose_layout()
 	_read_layout()
 	_draw_arrow_keys()
 
 
 # read LAYOUT, find dimensions, start, and endgoal positions, spawn player at start
 func _read_layout() -> void:
-	_rows = MAZELAYOUT.size() # num rows
-	_cols = MAZELAYOUT[0].length() # num cols
+	_rows = _layout.size() # num rows
+	_cols = _layout[0].length() # num cols
 	
 	# now go through everything to find s (start) and e (endgoal)
 	for y in range(_rows):
 		for x in range(_cols):
-			var ch: String = MAZELAYOUT[y][x]
+			var ch: String = _layout[y][x]
 			if ch == "s":
 				_start = Vector2i(x,y)
 			elif ch == "e":
@@ -73,15 +137,17 @@ func _read_layout() -> void:
 # check if a wall. If true, can't go throgh it
 func _check_wall(cell: Vector2i) -> bool:
 	# check out of bounds
-	if cell.x < 0 or cell.x >= _cols or cell.y <0 or cell.y >= _rows:
+	if cell.x < 0 or cell.x >= _cols:
+		return true
+	if cell.y <0 or cell.y >= _rows:
 		return true
 	#now check in bounds if the char is a # it is a wall
-	return MAZELAYOUT[cell.y][cell.x] == '#'
+	return _layout[cell.y][cell.x] == '#'
 
 func _process(delta: float) -> void:
 	if _over:
 		return
-	_time_left -= delta
+	_time_left = maxf(0.0, _time_left - delta)
 	time_changed.emit(_time_left, TIME_LIMIT)
 	if _time_left <= 0.0:
 		_end(false, "Out of time!")
@@ -191,3 +257,47 @@ func _arrow(text: String, direction: Vector2i) -> Button:
 	button.custom_minimum_size = Vector2(ARROW_SIZE, ARROW_SIZE)
 	button.pressed.connect(func(): _move(direction))
 	return button
+
+func _choose_layout() -> void:
+	if maze_seed == 0:
+		_random.randomize()
+	else:
+		_random.seed = maze_seed
+
+	var current_round: int = maxi(1, GameState.round_number)
+	var selection: Array
+	var difficulty: String
+
+	if current_round == 1:
+		selection = EASY_MAZES
+		difficulty = "Easy"
+	elif current_round == 2:
+		selection = MEDIUM_MAZES
+		difficulty = "Medium"
+	else:
+		selection = HARD_MAZES
+		difficulty = "Hard"
+
+	var selected: int = _random.randi_range(0, selection.size() - 1)
+	_layout = selection[selected]
+
+	print("Maze: round %d, difficulty: %s, preset: %d" % [current_round, difficulty, selected + 1])
+
+
+
+# for speeding up demo, force win or force fail.
+func _input(event: InputEvent) -> void:
+	if not testing_hotkeys or _over:
+		return
+
+	if event is InputEventKey:
+		if not event.pressed or event.echo:
+			return
+
+		if event.keycode == KEY_F:
+			get_viewport().set_input_as_handled()
+			_end(false, "demo forced maze fail.")
+
+		elif event.keycode == KEY_W:
+			get_viewport().set_input_as_handled()
+			_end(true, "demo forced maze complete.")
