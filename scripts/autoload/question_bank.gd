@@ -19,8 +19,16 @@ func _ready() -> void:
 
 
 ## Returns {} when every question has been used.
-func next_question() -> TriviaQuestion:
-	var pool := questions.filter(func(q): return not q._used())
+func next_question(score : int) -> TriviaQuestion:
+	var pool
+	
+	if score >= 200:
+		pool = questions.filter(func(q): return not q._used() && q.get_difficulty() == "Hard")
+	elif score >= 100:
+		pool = questions.filter(func(q): return not q._used() && q.get_difficulty() == "Medium")
+	else:
+		pool = questions.filter(func(q): return not q._used() && q.get_difficulty() == "Easy")
+	
 	if pool.is_empty():
 		return 
 	var q: TriviaQuestion = pool.pick_random()

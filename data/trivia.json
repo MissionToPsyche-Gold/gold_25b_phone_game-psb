@@ -1,6 +1,7 @@
 [
 	{
 		"id" : 100,
+		"difficulty" : "Easy",
 		"question" : "When was the asteroid Psyche discovered?",
 		"correct answer" : 3,
 		"answers" : ["1509", "1968", "2023", "1852"],
@@ -8,6 +9,7 @@
 	},
 	{
 		"id" : 101,
+		"difficulty" : "Easy",
 		"question" : "Who discovered the asteroid Psyche?",
 		"correct answer" : 0,
 		"answers" : ["Annibale de Gasparis", "Galileo Galilei", "Isaac Newton", "Neil deGrasse Tyson"],
@@ -15,6 +17,7 @@
 	},
 	{
 		"id" : 102,
+		"difficulty" : "Easy",
 		"question" : "What is the likely composition of Psyche?",
 		"correct answer" : 1,
 		"answers" : ["Rock and ice", "Rock and metal", "ice and metal", "Rock, metal, and ice"],
@@ -22,6 +25,7 @@
 	},
 	{
 		"id" : 103,
+		"difficulty" : "Hard",
 		"question" : "What is the pioneering technology demonstration attatched to the side of the Psyche spacecraft?",
 		"correct answer" : 2,
 		"answers" : ["Multispectral Imager", "Magnetrometer", "Deep Space Optical Communications (DSOC)", "Magnetrometer"],
@@ -29,6 +33,7 @@
 	},
 	{
 		"id" : 104,
+		"difficulty" : "Easy",
 		"question" : "What food is Psyche shaped like?",
 		"correct answer" : 2,
 		"answers" : ["Pizza", "Orange", "Potato", "Walnut"],
@@ -36,6 +41,7 @@
 	},
 	{
 		"id" : 105,
+		"difficulty" : "Medium",
 		"question" : "When is/was the Psyche spacecraft expected to reach the Psyche asteroid?",
 		"correct answer" : 2,
 		"answers" : ["October 2023", "November 2031", "July 2029", "May 2026"],
@@ -43,6 +49,7 @@
 	},
 	{
 		"id" : 106,
+		"difficulty" : "Medium",
 		"question" : "Which is NOT a science objective of Psyche?",
 		"correct answer" : 3,
 		"answers" : ["Chracterize Psyche's topography", "Determine how Psyche was formed", 
@@ -51,6 +58,7 @@
 	},
 	{
 		"id" : 107,
+		"difficulty" : "Hard",
 		"question" : "What is the purpose of the Multispectral Imager?",
 		"correct answer" : 1,
 		"answers" : ["Detect emmisions of neutron and gamma rays to determine what Psyche is made of", 
@@ -61,6 +69,7 @@
 	},
 	{
 		"id" : 108,
+		"difficulty" : "Hard",
 		"question" : "What is the purpose of the Gamma-Ray and Neutron Spectrometer?",
 		"correct answer" : 0,
 		"answers" : ["Detect emmisions of neutron and gamma rays to determine what Psyche is made of",
@@ -71,6 +80,7 @@
 	},
 	{
 		"id" : 109,
+		"difficulty" : "Hard",
 		"question" : "What is the purpose of the Magnetometor?",
 		"correct answer" : 2,
 		"answers" : ["Take pictures in different wavelengths of light to learn about the mineral composition fo Psyche", 
@@ -81,6 +91,7 @@
 	},
 	{
 		"id" : 110,
+		"difficulty" : "Hard",
 		"question" : "What is the purpose of the X-band radio raves?",
 		"correct answer" : 1,
 		"answers" : ["Take pictures in different wavelengths of light to learn about the mineral composition fo Psyche", 
@@ -91,6 +102,7 @@
 	}, 
 	{
 		"id" : 111,
+		"difficulty" : "Medium",
 		"question" : "What is another word for Optical communications?",
 		"correct answer" : 0,
 		"answers" : ["Laser communications", 
@@ -101,6 +113,7 @@
 	},
 	{
 		"id" : 112,
+		"difficulty" : "Easy",
 		"question" : "Where is the asteroid belt that Psyche is located?",
 		"correct answer" : 3,
 		"answers" : ["Between Earth and Mars", 
@@ -111,6 +124,7 @@
 	},
 	{
 		"id" : 113,
+		"difficulty" : "Medium",
 		"question" : "What is the approxiamate size of the Psyche spacecraft?",
 		"correct answer" : 1,
 		"answers" : ["A football field including endzones", 
@@ -121,6 +135,7 @@
 	},
 	{
 		"id" : 114,
+		"difficulty" : "Medium",
 		"question" : "What powers everything on board the Psyche spacecraft?",
 		"correct answer" : 3,
 		"answers" : ["Methane gas", 
@@ -131,17 +146,328 @@
 	}, 
 	{
 		"id" : 115,
+		"difficulty" : "Easy",
 		"question" : "When is/was the Psyche spacecraft expected to launch?",
-		"correct answer" : 1,
+		"correct answer" : 0,
 		"answers" : ["October 2023", "November 2031", "July 2029", "May 2018"],
 		"explanation" : "The Psyche spacecraft launched October 13, 2023 from Kennedy Space Center in Florida"
 	},
 	{
 		"id" : 116,
+		"difficulty" : "Easy",
 		"question" : "Why is Psyche sometimes referred to as 16 Psyche?",
 		"correct answer" : 2,
 		"answers" : ["Becuase it is approxiamately 16 miles long", "Becuase it is about 16% metal", 
-					"July 2029", "May 2026"],
-		"explanation" : "If all goes to plan, the asteroid Psyche's gracity will capture the spacecraft in Late July 2029"
+					"Because it was the 16th asteroid discovered", "Becuase Annibale de Gasparis discovered it at 16 years old"],
+		"explanation" : "Psyche is referred to as 16 Psyche because it was the 16th asteroid to be discovered"
+	},
+	{
+		"id" : 117,
+		"difficulty" : "Easy",
+		"question" : "About how big is the fill flight system of the spacecraft?",
+		"correct answer" : 0,
+		"answers" : ["The size of a singles tennis court", "The size of a football field, including end zones", 
+					"The size of the White House", "The size of a school bus"],
+		"explanation" : "Psyche spacecraft is 81 ft long by 24 ft wide, making it about the size of a singles tennis court"
+	},
+	{
+		"id" : 118,
+		"difficulty" : "Medium",
+		"question" : "What ancient Greek goddess is Psyche named after?",
+		"correct answer" : 3,
+		"answers" : ["The goddess of the Moon", "The goddess of wisdom", 
+					"The goddess of beauty", "The goddess of the soul"],
+		"explanation" : "Psyche is named after the goddess of the soul in ancient Greek mythology, oftend epicted as a butterfly-winged female figure"
+	},
+	{
+		"id" : 119,
+		"difficulty" : "Hard",
+		"question" : "How much was the total mass at launch (including both the rocket and spacecraft)?",
+		"correct answer" : 2,
+		"answers" : ["2,747 lbs", "6,056 lbs", 
+					"3.16 million lbs", "1.3 million lbs"],
+		"explanation" : "The total mass at launch is 3.16 million lbs, more than 99% of which is accounted for by the rocket"
+	},
+	{
+		"id" : 120,
+		"difficulty" : "Medium",
+		"question" : "What powers everything on board the spacecraft?",
+		"correct answer" : 1,
+		"answers" : ["4 lithium ion batteries", "2 five-panel, cross-shaped solar arrays", 
+					"500 gallons of methane gas", "A battery/gas hybrid system"],
+		"explanation" : "Two five-panel, cross-shaped solar arrays power everything on board, including the science instruments"
+	},
+	{
+		"id" : 121,
+		"difficulty" : "Medium",
+		"question" : "What is responsible for moving the spacecraft closer to Psyche?",
+		"correct answer" : 1,
+		"answers" : ["Megnetrometer", "Hall-effect thrusters", 
+					"Deep Space Optical Communications", "Gamma-ray and neutron spectrometer"],
+		"explanation" : "Psyche uses solar electriv propulsion using four Hall-effect thrusters"
+	},
+	{
+		"id" : 122,
+		"difficulty" : "Medium",
+		"question" : "How much force does a Hall-effect thruster exert on Psyche?",
+		"correct answer" : 0,
+		"answers" : ["The amount of force that one AA battery would exert on the palm of your hand", 
+					"The amount of force it would take to break a 2 inch rope in half", 
+					"The amount of force that you exert on Earth by doing a push-up", 
+					"The amount of force it would take to push a 3,000 lb car on a flat, frictionless surface"],
+		"explanation" : "One-trhuser provides up to 240 millinewtons of thrust, which is bout the amount of ofrce that one AA battery would exert on the palm of your hand"
+	},
+	{
+		"id" : 123,
+		"difficulty" : "Hard",
+		"question" : "How much xenon propellant is aboard the Psyche spacecraft?",
+		"correct answer" : 3,
+		"answers" : ["One 50-gallon tanks", 
+					"Four 12-gallon tanks", 
+					"Seven 22-gallon tanks", 
+					"Six 30-gallon tanks"],
+		"explanation" : "Psyche carries seven roughly 22-gallon tanks of xenon propellant - up to 2,392 lbs"
+	},
+	{
+		"id" : 124,
+		"difficulty" : "Easy",
+		"question" : "Where was Psyche launched from?",
+		"correct answer" : 0,
+		"answers" : ["Kennedy Space Center, Florida", 
+					"Cape Canaveral Space Force Station, Florida", 
+					"Starbase, Texas", 
+					"Corn Ranch, Texas"],
+		"explanation" : "Psyche was launched from Launch Complex 39A, NASA's Kennedy Space Center, Florida, in October 2023"
+	},
+	{
+		"id" : 125,
+		"difficulty" : "Easy",
+		"question" : "What was Psyche spacecraft's launch vehicle?",
+		"correct answer" : 1,
+		"answers" : ["NASA Saturn V", 
+					"SpaceX Falcon Heavy rocket", 
+					"SpaceX Falcon 9", 
+					"NASA Space Shuttle"],
+		"explanation" : "The SpaceX Falcon Heavy rocket launched the Psyche spacecraft"
+	},
+	{
+		"id" : 126,
+		"difficulty" : "Medium",
+		"question" : "How far does the spacecraft have to travel to Psyche",
+		"correct answer" : 2,
+		"answers" : ["3.6 billion miles", 
+					"57.3 million miles", 
+					"2.2 billion miles", 
+					"193.7 million miles"],
+		"explanation" : "The spacecraft travels about 2.2 billion miles to travel to Psyche"
+	},
+	{
+		"id" : 127,
+		"difficulty" : "Easy",
+		"question" : "How long does it take for the spacecraft to get to Psyche?",
+		"correct answer" : 2,
+		"answers" : ["2 years", 
+					"4 years", 
+					"6 years", 
+					"8 years"],
+		"explanation" : "Flight time to Psyche is about 6 years, being launched in 2023 and being expected to arrive at Psyche in 2029"
+	},
+	{
+		"id" : 128,
+		"difficulty" : "Medium",
+		"question" : "When does the Deep Space Optical Communications experiment take place",
+		"correct answer" : 0,
+		"answers" : ["November 2023 to October 2025", 
+					"October 2023 to July 2029", 
+					"August 2029 to November 2031", 
+					"November 2023 to November 2031"],
+		"explanation" : "The DSOC happens during the first 2 years of the Psyche mission, from November 2023 to October 2025"
+	},
+	{
+		"id" : 129,
+		"difficulty" : "Easy",
+		"question" : "How big is the Psyche asteroid at its widest point?",
+		"correct answer" : 1,
+		"answers" : ["280 miles", 
+					"173 miles", 
+					"144 miles", 
+					"232 miles"],
+		"explanation" : "If Psyche were sliced in half horizontally at the equator, it would measure 173 miles across its widest point"
+	},
+	{
+		"id" : 130,
+		"difficulty" : "Easy",
+		"question" : "How much of Psyche's volume is estimated to be metal?",
+		"correct answer" : 2,
+		"answers" : ["0% to 10%", 
+					"20% to 30%", 
+					"30% to 60%", 
+					"80% to 100%"],
+		"explanation" : "Psyche is likely a mixture of rock and metal, with metal making up between 30% to 60% of its volume"
+	},
+	{
+		"id" : 131,
+		"difficulty" : "Easy",
+		"question" : "When is/was Psyche spacecraft expected to fly by Mars?",
+		"correct answer" : 1,
+		"answers" : ["October 2023", 
+					"May 2026", 
+					"July 2029", 
+					"November 2031"],
+		"explanation" : "The spacecraft flew by Mars, using the planet's gravity as a slingshot to increase velocity"
+	},
+	{
+		"id" : 132,
+		"difficulty" : "Easy",
+		"question" : "Which planet's gravity did the spacecraft use to increase velocity towards Psyche?",
+		"correct answer" : 2,
+		"answers" : ["Mercury", 
+					"Earth", 
+					"Mars", 
+					"Jupiter"],
+		"explanation" : "The spacecraft flew by Mars, using the planet's gravity as a slingshot to increase velocity"
+	},
+	{
+		"id" : 133,
+		"difficulty" : "Medium",
+		"question" : "At least how long will the spacecraft orbit Psyche?",
+		"correct answer" : 3,
+		"answers" : ["3 months", 
+					"12 months", 
+					"18 months", 
+					"26 months"],
+		"explanation" : "From August 2029 until November 2031, 26 months, the spacecraft will orbit Psyche"
+	},
+	{
+		"id" : 134,
+		"difficulty" : "Medium",
+		"question" : "How often do Earth and Mars closely align?",
+		"correct answer" : 3,
+		"answers" : ["3 months", 
+					"12 months", 
+					"18 months", 
+					"26 months"],
+		"explanation" : "Earth and Mars align closely only about once every 26 months"
+	},
+	{
+		"id" : 135,
+		"difficulty" : "Hard",
+		"question" : "What does NOT occur during the initial checkout phase of the mission?",
+		"correct answer" : 0,
+		"answers" : ["Confirm that Psyche is can view the asteroid", 
+					"Confirm that Psyche is drawing power from its solar arrays", 
+					"Confirm that Psyche is operating at an appropriate temperature", 
+					"Confirm that Psyche is engaging in two-way communications with Earth"],
+		"explanation" : "The Psyche spacecraft is not expected to be able to view the asteroid in the initial checkout phase"
+	},
+	{
+		"id" : 136,
+		"difficulty" : "Hard",
+		"question" : "How long does the cruise phase last?",
+		"correct answer" : 2,
+		"answers" : ["100 days", 
+					"2 years", 
+					"5 years", 
+					"9 years"],
+		"explanation" : "The cruise phase, when the spacecraft is ready to fire its thrusters nearly continuously, lasts more than five years"
+	},
+	{
+		"id" : 137,
+		"difficulty" : "Medium",
+		"question" : "Which of the following is NOT a part of the cruise phase?",
+		"correct answer" : 1,
+		"answers" : ["Mars Gravity Assist", 
+					"Cruise 3", 
+					"Cruise 2", 
+					"Cruise 1"],
+		"explanation" : "Cruise is divided into three parts: Cruise 1, Mars Gravity Assist, and Cruise 2"
+	},
+	{
+		"id" : 138,
+		"difficulty" : "Hard",
+		"question" : "How long does the mission's orbital operations phase last?",
+		"correct answer" : 2,
+		"answers" : ["6 months", 
+					"14 months", 
+					"26 months", 
+					"45 months"],
+		"explanation" : "The mission's orbital operations phase will start in August 2029 and last at least 26 months"
+	},
+	{
+		"id" : 139,
+		"difficulty" : "Easy",
+		"question" : "How many orbits are in the orbital operations phase?",
+		"correct answer" : 3,
+		"answers" : ["1", 
+					"2", 
+					"3", 
+					"4"],
+		"explanation" : "There are four orbits, named alphabetically by the highest (A) to lowest (D), but they don't proceed in alphabetical order"
+	},
+	{
+		"id" : 140,
+		"difficulty" : "Hard",
+		"question" : "What is the purpose of Orbit A?",
+		"correct answer" : 0,
+		"answers" : ["Focus on  imaging and mapping the asteroid while taking magnetic field and gravity measurements", 
+					"Focus on mapping the topography and geology of at least 80% of the asteroid while also continuing to assess the asteroid's magnetic field and gravity", 
+					"Focus on measuring topography and perform the highest-piority magnetic field and gravity measurements of the prime mission", 
+					"Focus on measuring the asteroid's composition and map the asteroid and study its gravity and magnetic field"],
+		"explanation" : "Orbit A focuses on imaging and mapping the asteroid while taking magnetic field and gravity measurements"
+	},
+	{
+		"id" : 141,
+		"difficulty" : "Hard",
+		"question" : "What is the purpose of Orbit B?",
+		"correct answer" : 1,
+		"answers" : ["Focus on  imaging and mapping the asteroid while taking magnetic field and gravity measurements", 
+					"Focus on mapping the topography and geology of at least 80% of the asteroid while also continuing to assess the asteroid's magnetic field and gravity", 
+					"Focus on measuring topography and perform the highest-piority magnetic field and gravity measurements of the prime mission", 
+					"Focus on measuring the asteroid's composition and map the asteroid and study its gravity and magnetic field"],
+		"explanation" : "Orbit B focuses on mapping the topography and geology of at least 80% of the asteroid while also continuing to assess the asteroid's magnetic field and gravity"
+	},
+	{
+		"id" : 142,
+		"difficulty" : "Hard",
+		"question" : "What is the purpose of Orbit C?",
+		"correct answer" : 2,
+		"answers" : ["Focus on  imaging and mapping the asteroid while taking magnetic field and gravity measurements", 
+					"Focus on mapping the topography and geology of at least 80% of the asteroid while also continuing to assess the asteroid's magnetic field and gravity", 
+					"Focus on measuring topography and perform the highest-piority magnetic field and gravity measurements of the prime mission", 
+					"Focus on measuring the asteroid's composition and map the asteroid and study its gravity and magnetic field"],
+		"explanation" : "Orbit C focuses on measuring topography and perform the highest-piority magnetic field and gravity measurements of the prime mission"
+	},
+	{
+		"id" : 143,
+		"difficulty" : "Hard",
+		"question" : "What is the purpose of Orbit D?",
+		"correct answer" : 3,
+		"answers" : ["Focus on  imaging and mapping the asteroid while taking magnetic field and gravity measurements", 
+					"Focus on mapping the topography and geology of at least 80% of the asteroid while also continuing to assess the asteroid's magnetic field and gravity", 
+					"Focus on measuring topography and perform the highest-piority magnetic field and gravity measurements of the prime mission", 
+					"Focus on measuring the asteroid's composition and map the asteroid and study its gravity and magnetic field"],
+		"explanation" : "Orbit D focuses on measuring the asteroid's composition and map the asteroid and study its gravity and magnetic field"
+	},
+	{
+		"id" : 144,
+		"difficulty" : "Easy",
+		"question" : "The Psyche mission is the first to explore which of the following?",
+		"correct answer" : 0,
+		"answers" : ["An asteroid with a surface that contains substantial amounts of metal rather than rock or ice", 
+					"An asteroid with a rocky surface, like Earth's", 
+					"The outer layer of previous planetary core", 
+					"An asteroid in the asteroid belt"],
+		"explanation" : "Psyche is the first mission to explore an asteroid with a surface that contains substantial amounds of metal rather than rock or ice, an unexplored building block of planet formation"
+	},
+	{
+		"id" : 145,
+		"difficulty" : "Medium",
+		"question" : "Which of the following is NOT used to estimate the metal content of Psyche?",
+		"correct answer" : 1,
+		"answers" : ["The asteroids density", 
+					"Images taken from Earth's surface", 
+					"How much visible light and radar are reflected by the asteroid", 
+					"The measurements of the asteroid's thermal inertia (how quickly it gains or re-radiates heat)"],
+		"explanation" : "Images taken from Earth's surface are not used to estimate metal content of Psyche"
 	}
 ]

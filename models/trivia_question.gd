@@ -7,6 +7,7 @@ var question : String
 var answers : Array[String]
 var correct_answer : int
 var explanation : String
+var difficulty : String
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,10 +20,14 @@ func _init(data : Dictionary) -> void:
 	answers.assign(data["answers"])
 	correct_answer = data["correct answer"]
 	explanation = data["explanation"]
+	difficulty = data["difficulty"]
 	
 func is_correct(choice_index : int) -> bool:
 	return choice_index == correct_answer
 
+func get_difficulty() -> String:
+	return difficulty
+	
 func get_question() -> String:
 	return question
 	
