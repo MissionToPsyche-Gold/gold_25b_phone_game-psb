@@ -7,7 +7,7 @@ extends Control
 var screen: TriviaScreen
 var pause: PauseOverlay
 var attempt_token: String
-var player            # PsychePlayer
+var player : PsychePlayer
 var question: TriviaQuestion
 var round_number := 1
 
@@ -20,7 +20,7 @@ func _ready() -> void:
 	attempt_token = GameState.get_attempt_token()
 	player = GameState.current_player()
 	round_number = GameState.round_number
-	question = QuestionBank.next_question()
+	question = QuestionBank.next_question(player.score)
 	if question ==  null:
 		if GameState.end_questions_exhausted():
 			GameFlow.open_current()
