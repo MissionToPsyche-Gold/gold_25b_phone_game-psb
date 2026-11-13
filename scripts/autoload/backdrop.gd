@@ -16,7 +16,7 @@ func _ready() -> void:
 
 ## Big Psyche + spacecraft, like the title screen mockup.
 func use_menu_layout(animate := true) -> void:
-	background.set_layout(Vector2(0.86, 0.95), 3.0, Vector2(0.27, 0.885), 2.0, animate,
+	background.set_layout(Vector2(0.86, 0.95), 3.0, Vector2(0.24, 0.935), 2.0, animate,
 		Vector2(0.84, 0.07), 1.0)
 
 

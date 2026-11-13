@@ -80,11 +80,9 @@ func run() -> void:
 	await settle()
 	check(current_scene.name == "PlayerSetup", "Setup scene opens")
 	var setup = current_scene.setup
-	check(not setup._rows[2].visible, "Two fields by default")
-	setup._on_start()
-	check(setup._errors[0].visible, "Validation error shown")
-	setup._fields[0].text = "Ada"
-	setup._fields[1].text = "Sam"
+	check(not setup._rows[2].visible, "Two players by default")
+	check(not setup.set_callsign(1, setup.get_selected_names()[0]), "Duplicate callsign rejected")
+	check(setup.set_callsign(0, "Metal Core") or setup.get_selected_names()[1] == "Metal Core", "Callsign can be chosen")
 	current_scene.round_limit = 1
 	setup._on_start()
 	check(current_scene.rules.visible, "Rules shown after valid setup")
@@ -101,17 +99,17 @@ func run() -> void:
 	await settle()
 	check(current_scene.name == "Trivia", "Trivia scene opens")
 	var q = current_scene.question
-	current_scene.screen._on_answer(int(q.correct_index))
+	current_scene.screen._on_answer(q.get_correct_index())
 	check(current_scene.screen._feedback.visible, "Answer feedback shown")
 	check(state.players[0].score == 10, "Correct answer recorded once")
-	current_scene.screen._on_answer(int(q.correct_index))
+	current_scene.screen._on_answer(q.get_correct_index())
 	check(state.players[0].score == 10, "Second tap ignored")
 	current_scene.screen.continue_pressed.emit()
 	await settle()
 	flow.start_activity()
 	await settle()
 	q = current_scene.question
-	current_scene.screen._on_answer((int(q.correct_index) + 1) % 4)
+	current_scene.screen._on_answer((q.get_correct_index() + 1) % 4)
 	check(state.players[1].lives == 2, "Wrong answer costs a life")
 	current_scene.screen.continue_pressed.emit()
 	await settle()

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="GutTests" failures="17" tests="33" >
+  <testsuite name="tests/unit/test_ts001_player_setup.gd" tests="5" failures="4" skipped="0" time="0.016914" >
+      <testcase name="test_tc001_player_count_limits" assertions="5" status="pass" classname="tests/unit/test_ts001_player_setup.gd" time="0.003013" >
+      </testcase>
+      <testcase name="test_tc002_callsign_list_is_valid" assertions="1" status="fail" classname="tests/unit/test_ts001_player_setup.gd" time="0.000326" >
+      <failure message="failed"><![CDATA[Expected [<null>] to be anything but NULL:  Callsigns script should exist
+            at line 32]]></failure></testcase>
+      <testcase name="test_tc003_no_free_text_entry" assertions="1" status="fail" classname="tests/unit/test_ts001_player_setup.gd" time="0.00637" >
+      <failure message="failed"><![CDATA[[4] expected to equal [0]:  Setup must not contain any LineEdit
+            at line 50]]></failure></testcase>
+      <testcase name="test_tc004_duplicate_callsign_rejected" assertions="1" status="fail" classname="tests/unit/test_ts001_player_setup.gd" time="0.003593" >
+      <failure message="failed"><![CDATA[Setup screen should have set_callsign()
+            at line 56]]></failure></testcase>
+      <testcase name="test_tc005_confirm_emits_selected_callsigns" assertions="1" status="fail" classname="tests/unit/test_ts001_player_setup.gd" time="0.003612" >
+      <failure message="failed"><![CDATA[Setup screen should have get_selected_names()
+            at line 68]]></failure></testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts002_turns_scoring_lives.gd" tests="4" failures="0" skipped="0" time="0.009039" >
+      <testcase name="test_tc006_correct_answer_scores_once" assertions="4" status="pass" classname="tests/unit/test_ts002_turns_scoring_lives.gd" time="0.002496" >
+      </testcase>
+      <testcase name="test_tc007_wrong_answer_costs_life" assertions="2" status="pass" classname="tests/unit/test_ts002_turns_scoring_lives.gd" time="0.002377" >
+      </testcase>
+      <testcase name="test_tc008_eliminated_player_skipped" assertions="1" status="pass" classname="tests/unit/test_ts002_turns_scoring_lives.gd" time="0.002044" >
+      </testcase>
+      <testcase name="test_tc009_game_ends_with_one_survivor" assertions="1" status="pass" classname="tests/unit/test_ts002_turns_scoring_lives.gd" time="0.002122" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts003_question_bank.gd" tests="5" failures="4" skipped="0" time="0.007607" >
+      <testcase name="test_tc010_question_data_is_valid" assertions="324" status="fail" classname="tests/unit/test_ts003_question_bank.gd" time="0.006246" >
+      <failure message="failed"><![CDATA[[3] expected to equal [4]:  Answers are all different: question 103.0
+            at line 36]]></failure></testcase>
+      <testcase name="test_tc011_no_repeats_in_session" assertions="18" status="pass" classname="tests/unit/test_ts003_question_bank.gd" time="0.000577" >
+      </testcase>
+      <testcase name="test_tc012_falls_back_to_other_difficulty" assertions="1" status="fail" classname="tests/unit/test_ts003_question_bank.gd" time="0.000282" >
+      <failure message="failed"><![CDATA[Expected [<null>] to be anything but NULL:  Medium/Hard questions remain, so a question must be returned
+            at line 61]]></failure></testcase>
+      <testcase name="test_tc013_optional_question_image" assertions="1" status="fail" classname="tests/unit/test_ts003_question_bank.gd" time="0.000174" >
+      <failure message="failed"><![CDATA[TriviaQuestion should have has_image()
+            at line 70]]></failure></testcase>
+      <testcase name="test_tc014_malformed_record_rejected" assertions="1" status="fail" classname="tests/unit/test_ts003_question_bank.gd" time="0.000328" >
+      <failure message="failed"><![CDATA[Expected [ARRAY(["_ready", "_init", "is_correct", "get_difficulty", "get_question", "get_answers", "get_correct_index", "get_explanation", "_used", "set_used", "_process"])] to contain value:  ["is_valid_record"]:  TriviaQuestion should have is_valid_record()
+            at line 85]]></failure></testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts004_trivia_screen.gd" tests="3" failures="1" skipped="0" time="0.009206" >
+      <testcase name="test_tc015_first_tap_only" assertions="2" status="pass" classname="tests/unit/test_ts004_trivia_screen.gd" time="0.003436" >
+      </testcase>
+      <testcase name="test_tc016_feedback_shows_answer_and_explanation" assertions="4" status="pass" classname="tests/unit/test_ts004_trivia_screen.gd" time="0.003158" >
+      </testcase>
+      <testcase name="test_tc017_question_image_shown_only_when_present" assertions="1" status="fail" classname="tests/unit/test_ts004_trivia_screen.gd" time="0.002612" >
+      <failure message="failed"><![CDATA[TriviaScreen should have set_question_image()
+            at line 42]]></failure></testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts005_maze.gd" tests="5" failures="0" skipped="0" time="0.027747" >
+      <testcase name="test_tc018_all_presets_solvable" assertions="13" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.014288" >
+      </testcase>
+      <testcase name="test_tc019_wall_blocks_movement" assertions="2" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.002368" >
+      </testcase>
+      <testcase name="test_tc020_goal_wins_once" assertions="2" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.00337" >
+      </testcase>
+      <testcase name="test_tc021_timeout_loses" assertions="2" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.002434" >
+      </testcase>
+      <testcase name="test_tc022_difficulty_by_round_and_seeded" assertions="3" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.005287" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts008_look_accessibility.gd" tests="2" failures="3" skipped="0" time="0.000772" >
+      <testcase name="test_tc029_minimum_text_and_touch_sizes" assertions="4" status="pass" classname="tests/unit/test_ts008_look_accessibility.gd" time="0.000251" >
+      </testcase>
+      <testcase name="test_tc030_brand_magenta_no_turquoise" assertions="12" status="fail" classname="tests/unit/test_ts008_look_accessibility.gd" time="0.000521" >
+      <failure message="failed"><![CDATA[Palette has a Magenta accent
+            at line 19]]></failure></testcase>
+  </testsuite>
+  <testsuite name="tests/integration/test_ts006_bonus_challenge.gd" tests="3" failures="2" skipped="0" time="0.093526" >
+      <testcase name="test_tc023_every_minigame_has_story" assertions="1" status="fail" classname="tests/integration/test_ts006_bonus_challenge.gd" time="0.00226" >
+      <failure message="failed"><![CDATA[maze has a story
+            at line 34]]></failure></testcase>
+      <testcase name="test_tc024_intro_shows_story" assertions="2" status="fail" classname="tests/integration/test_ts006_bonus_challenge.gd" time="0.039683" >
+      <failure message="failed"><![CDATA[Expected 'BONUS CHALLENGE
+      Metal Core's challenge
+      Maze
+      Guide the spacecraft through the maze to the goal before time runs out. Bumping a wall won't move you.
+      30 seconds
+      Win: +1 life
+      
+      
+      
+      
+      
+      
+      ' to contain '<no story>', match_case=Intro card shows the story
+            at line 47]]></failure></testcase>
+      <testcase name="test_tc025_maze_win_restores_one_life_once" assertions="3" status="pass" classname="tests/integration/test_ts006_bonus_challenge.gd" time="0.051583" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/integration/test_ts007_about_navigation.gd" tests="3" failures="3" skipped="0" time="0.053298" >
+      <testcase name="test_tc026_menu_has_about_button" assertions="1" status="fail" classname="tests/integration/test_ts007_about_navigation.gd" time="0.052702" >
+      <failure message="failed"><![CDATA[Menu has an About button
+            at line 38]]></failure></testcase>
+      <testcase name="test_tc027_about_lists_team" assertions="1" status="fail" classname="tests/integration/test_ts007_about_navigation.gd" time="0.000385" >
+      <failure message="failed"><![CDATA[Expected [<null>] to be anything but NULL:  About scene exists
+            at line 44]]></failure></testcase>
+      <testcase name="test_tc028_about_shows_disclaimer_and_credits" assertions="1" status="fail" classname="tests/integration/test_ts007_about_navigation.gd" time="0.000211" >
+      <failure message="failed"><![CDATA[Expected [<null>] to be anything but NULL:  About scene exists
+            at line 57]]></failure></testcase>
+  </testsuite>
+  <testsuite name="tests/integration/test_ts008_screen_fit.gd" tests="1" failures="1" skipped="0" time="4.79327" >
+      <testcase name="test_tc031_screens_fit_phone_width" assertions="9" status="fail" classname="tests/integration/test_ts008_screen_fit.gd" time="4.79327" >
+      <failure message="failed"><![CDATA[res://scenes/about.tscn exists
+            at line 18]]></failure></testcase>
+  </testsuite>
+  <testsuite name="tests/integration/test_ts009_game_flow.gd" tests="2" failures="3" skipped="0" time="0.43949" >
+      <testcase name="test_tc032_full_session_reaches_results" assertions="4" status="fail" classname="tests/integration/test_ts009_game_flow.gd" time="0.35492" >
+      <failure message="failed"><![CDATA[[STRING_NAME(PlayerSetup)] expected to equal ["PlayerHandoff"]:  Handoff before trivia turn 1
+            at line 27]]></failure></testcase>
+      <testcase name="test_tc033_play_again_resets" assertions="2" status="pass" classname="tests/integration/test_ts009_game_flow.gd" time="0.08457" >
+      </testcase>
+  </testsuite>
+</testsuites>

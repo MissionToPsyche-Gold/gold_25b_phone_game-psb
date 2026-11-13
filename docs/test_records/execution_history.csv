@@ -1,0 +1,232 @@
+Test Case,Test function,Run,Timestamp,Run description,Status,Failure message
+TC-001,test_tc001_player_count_limits,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Pass,
+TC-001,test_tc001_player_count_limits,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-001,test_tc001_player_count_limits,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-001,test_tc001_player_count_limits,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-001,test_tc001_player_count_limits,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-001,test_tc001_player_count_limits,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-001,test_tc001_player_count_limits,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-002,test_tc002_callsign_list_is_valid,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-002,test_tc002_callsign_list_is_valid,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-002,test_tc002_callsign_list_is_valid,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-002,test_tc002_callsign_list_is_valid,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-002,test_tc002_callsign_list_is_valid,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-002,test_tc002_callsign_list_is_valid,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-002,test_tc002_callsign_list_is_valid,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-003,test_tc003_no_free_text_entry,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-003,test_tc003_no_free_text_entry,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-003,test_tc003_no_free_text_entry,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-003,test_tc003_no_free_text_entry,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-003,test_tc003_no_free_text_entry,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-003,test_tc003_no_free_text_entry,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-003,test_tc003_no_free_text_entry,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-004,test_tc004_duplicate_callsign_rejected,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-004,test_tc004_duplicate_callsign_rejected,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-004,test_tc004_duplicate_callsign_rejected,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-004,test_tc004_duplicate_callsign_rejected,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-004,test_tc004_duplicate_callsign_rejected,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-004,test_tc004_duplicate_callsign_rejected,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-004,test_tc004_duplicate_callsign_rejected,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-005,test_tc005_confirm_emits_selected_callsigns,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-005,test_tc005_confirm_emits_selected_callsigns,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-005,test_tc005_confirm_emits_selected_callsigns,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-005,test_tc005_confirm_emits_selected_callsigns,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-005,test_tc005_confirm_emits_selected_callsigns,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-005,test_tc005_confirm_emits_selected_callsigns,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-005,test_tc005_confirm_emits_selected_callsigns,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-006,test_tc006_correct_answer_scores_once,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,Test script did not load: parse error 'Cannot infer the type of p' in the test file (test defect)
+TC-006,test_tc006_correct_answer_scores_once,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-006,test_tc006_correct_answer_scores_once,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-006,test_tc006_correct_answer_scores_once,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-006,test_tc006_correct_answer_scores_once,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-006,test_tc006_correct_answer_scores_once,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-006,test_tc006_correct_answer_scores_once,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-007,test_tc007_wrong_answer_costs_life,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,Test script did not load: parse error 'Cannot infer the type of p' in the test file (test defect)
+TC-007,test_tc007_wrong_answer_costs_life,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-007,test_tc007_wrong_answer_costs_life,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-007,test_tc007_wrong_answer_costs_life,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-007,test_tc007_wrong_answer_costs_life,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-007,test_tc007_wrong_answer_costs_life,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-007,test_tc007_wrong_answer_costs_life,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-008,test_tc008_eliminated_player_skipped,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,Test script did not load: parse error 'Cannot infer the type of p' in the test file (test defect)
+TC-008,test_tc008_eliminated_player_skipped,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-008,test_tc008_eliminated_player_skipped,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-008,test_tc008_eliminated_player_skipped,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-008,test_tc008_eliminated_player_skipped,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-008,test_tc008_eliminated_player_skipped,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-008,test_tc008_eliminated_player_skipped,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-009,test_tc009_game_ends_with_one_survivor,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,Test script did not load: parse error 'Cannot infer the type of p' in the test file (test defect)
+TC-009,test_tc009_game_ends_with_one_survivor,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-009,test_tc009_game_ends_with_one_survivor,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-009,test_tc009_game_ends_with_one_survivor,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-009,test_tc009_game_ends_with_one_survivor,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-009,test_tc009_game_ends_with_one_survivor,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-009,test_tc009_game_ends_with_one_survivor,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-010,test_tc010_question_data_is_valid,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-010,test_tc010_question_data_is_valid,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-010,test_tc010_question_data_is_valid,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-010,test_tc010_question_data_is_valid,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-010,test_tc010_question_data_is_valid,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-010,test_tc010_question_data_is_valid,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-010,test_tc010_question_data_is_valid,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-011,test_tc011_no_repeats_in_session,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Pass,
+TC-011,test_tc011_no_repeats_in_session,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-011,test_tc011_no_repeats_in_session,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-011,test_tc011_no_repeats_in_session,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-011,test_tc011_no_repeats_in_session,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-011,test_tc011_no_repeats_in_session,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-011,test_tc011_no_repeats_in_session,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-012,test_tc012_falls_back_to_other_difficulty,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-012,test_tc012_falls_back_to_other_difficulty,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-012,test_tc012_falls_back_to_other_difficulty,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-012,test_tc012_falls_back_to_other_difficulty,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-012,test_tc012_falls_back_to_other_difficulty,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-012,test_tc012_falls_back_to_other_difficulty,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-012,test_tc012_falls_back_to_other_difficulty,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-013,test_tc013_optional_question_image,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-013,test_tc013_optional_question_image,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-013,test_tc013_optional_question_image,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-013,test_tc013_optional_question_image,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-013,test_tc013_optional_question_image,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-013,test_tc013_optional_question_image,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-013,test_tc013_optional_question_image,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-014,test_tc014_malformed_record_rejected,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-014,test_tc014_malformed_record_rejected,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-014,test_tc014_malformed_record_rejected,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-014,test_tc014_malformed_record_rejected,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-014,test_tc014_malformed_record_rejected,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-014,test_tc014_malformed_record_rejected,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-014,test_tc014_malformed_record_rejected,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-015,test_tc015_first_tap_only,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Pass,
+TC-015,test_tc015_first_tap_only,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-015,test_tc015_first_tap_only,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-015,test_tc015_first_tap_only,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-015,test_tc015_first_tap_only,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-015,test_tc015_first_tap_only,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-015,test_tc015_first_tap_only,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-016,test_tc016_feedback_shows_answer_and_explanation,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Pass,
+TC-016,test_tc016_feedback_shows_answer_and_explanation,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-016,test_tc016_feedback_shows_answer_and_explanation,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-016,test_tc016_feedback_shows_answer_and_explanation,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-016,test_tc016_feedback_shows_answer_and_explanation,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-016,test_tc016_feedback_shows_answer_and_explanation,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-016,test_tc016_feedback_shows_answer_and_explanation,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-017,test_tc017_question_image_shown_only_when_present,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-017,test_tc017_question_image_shown_only_when_present,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-017,test_tc017_question_image_shown_only_when_present,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-017,test_tc017_question_image_shown_only_when_present,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-017,test_tc017_question_image_shown_only_when_present,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-017,test_tc017_question_image_shown_only_when_present,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-017,test_tc017_question_image_shown_only_when_present,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-018,test_tc018_all_presets_solvable,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Pass,
+TC-018,test_tc018_all_presets_solvable,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-018,test_tc018_all_presets_solvable,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-018,test_tc018_all_presets_solvable,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-018,test_tc018_all_presets_solvable,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-018,test_tc018_all_presets_solvable,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-018,test_tc018_all_presets_solvable,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-019,test_tc019_wall_blocks_movement,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-019,test_tc019_wall_blocks_movement,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-019,test_tc019_wall_blocks_movement,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-019,test_tc019_wall_blocks_movement,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-019,test_tc019_wall_blocks_movement,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-019,test_tc019_wall_blocks_movement,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-019,test_tc019_wall_blocks_movement,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-020,test_tc020_goal_wins_once,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-020,test_tc020_goal_wins_once,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-020,test_tc020_goal_wins_once,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-020,test_tc020_goal_wins_once,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-020,test_tc020_goal_wins_once,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-020,test_tc020_goal_wins_once,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-020,test_tc020_goal_wins_once,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-021,test_tc021_timeout_loses,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-021,test_tc021_timeout_loses,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-021,test_tc021_timeout_loses,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-021,test_tc021_timeout_loses,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-021,test_tc021_timeout_loses,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-021,test_tc021_timeout_loses,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-021,test_tc021_timeout_loses,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-022,test_tc022_difficulty_by_round_and_seeded,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-022,test_tc022_difficulty_by_round_and_seeded,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-022,test_tc022_difficulty_by_round_and_seeded,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-022,test_tc022_difficulty_by_round_and_seeded,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-022,test_tc022_difficulty_by_round_and_seeded,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-022,test_tc022_difficulty_by_round_and_seeded,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-022,test_tc022_difficulty_by_round_and_seeded,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-023,test_tc023_every_minigame_has_story,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-023,test_tc023_every_minigame_has_story,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-023,test_tc023_every_minigame_has_story,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-023,test_tc023_every_minigame_has_story,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-023,test_tc023_every_minigame_has_story,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-023,test_tc023_every_minigame_has_story,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-023,test_tc023_every_minigame_has_story,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-024,test_tc024_intro_shows_story,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-024,test_tc024_intro_shows_story,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-024,test_tc024_intro_shows_story,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-024,test_tc024_intro_shows_story,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-024,test_tc024_intro_shows_story,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-024,test_tc024_intro_shows_story,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-024,test_tc024_intro_shows_story,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-025,test_tc025_maze_win_restores_one_life_once,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Pass,
+TC-025,test_tc025_maze_win_restores_one_life_once,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-025,test_tc025_maze_win_restores_one_life_once,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-025,test_tc025_maze_win_restores_one_life_once,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-025,test_tc025_maze_win_restores_one_life_once,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-025,test_tc025_maze_win_restores_one_life_once,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-025,test_tc025_maze_win_restores_one_life_once,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-026,test_tc026_menu_has_about_button,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-026,test_tc026_menu_has_about_button,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-026,test_tc026_menu_has_about_button,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-026,test_tc026_menu_has_about_button,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-026,test_tc026_menu_has_about_button,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-026,test_tc026_menu_has_about_button,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-026,test_tc026_menu_has_about_button,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-027,test_tc027_about_lists_team,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-027,test_tc027_about_lists_team,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-027,test_tc027_about_lists_team,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-027,test_tc027_about_lists_team,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-027,test_tc027_about_lists_team,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-027,test_tc027_about_lists_team_only,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Fail,failed
+TC-027,test_tc027_about_lists_team_only,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-028,test_tc028_about_shows_disclaimer_and_credits,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-028,test_tc028_about_shows_disclaimer_and_credits,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-028,test_tc028_about_shows_disclaimer_and_credits,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-028,test_tc028_about_shows_disclaimer_and_credits,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-028,test_tc028_about_shows_disclaimer_and_credits,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-028,test_tc028_about_explains_project_and_mission,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Fail,failed
+TC-028,test_tc028_about_explains_project_and_mission,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-029,test_tc029_minimum_text_and_touch_sizes,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Pass,
+TC-029,test_tc029_minimum_text_and_touch_sizes,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-029,test_tc029_minimum_text_and_touch_sizes,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-029,test_tc029_minimum_text_and_touch_sizes,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-029,test_tc029_minimum_text_and_touch_sizes,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-029,test_tc029_minimum_text_and_touch_sizes,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-029,test_tc029_minimum_text_and_touch_sizes,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-030,test_tc030_brand_magenta_no_turquoise,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-030,test_tc030_brand_magenta_no_turquoise,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-030,test_tc030_brand_magenta_no_turquoise,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-030,test_tc030_brand_magenta_no_turquoise,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-030,test_tc030_brand_magenta_no_turquoise,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-030,test_tc030_brand_magenta_no_turquoise,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-030,test_tc030_brand_magenta_no_turquoise,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-031,test_tc031_screens_fit_phone_width,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-031,test_tc031_screens_fit_phone_width,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-031,test_tc031_screens_fit_phone_width,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-031,test_tc031_screens_fit_phone_width,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-031,test_tc031_screens_fit_phone_width,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-031,test_tc031_screens_fit_phone_width,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-031,test_tc031_screens_fit_phone_width,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-032,test_tc032_full_session_reaches_results,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Fail,failed
+TC-032,test_tc032_full_session_reaches_results,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Fail,failed
+TC-032,test_tc032_full_session_reaches_results,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-032,test_tc032_full_session_reaches_results,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-032,test_tc032_full_session_reaches_results,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-032,test_tc032_full_session_reaches_results,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-032,test_tc032_full_session_reaches_results,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,
+TC-033,test_tc033_play_again_resets,run02_tdd_first_run,2026-11-12T18:54:58-05:00,"Test-first run: tests written, features not built",Pass,
+TC-033,test_tc033_play_again_resets,run03_tests_fixed_before_build,2026-11-12T18:55:28-05:00,"Test code defects fixed, features still not built",Pass,
+TC-033,test_tc033_play_again_resets,run04_after_build,2026-11-12T18:58:54-05:00,After building the features,Pass,
+TC-033,test_tc033_play_again_resets,run06_regression_1,2026-11-12T19:00:56-05:00,Regression run 1,Pass,
+TC-033,test_tc033_play_again_resets,run07_regression_2,2026-11-12T19:01:10-05:00,Regression run 2,Pass,
+TC-033,test_tc033_play_again_resets,run09_about_tests_changed_before_edit,2026-11-12T19:13:47-05:00,"About page requirements changed: tests updated first, page not yet edited",Pass,
+TC-033,test_tc033_play_again_resets,run10_about_after_edit,2026-11-12T19:14:15-05:00,After editing the About page,Pass,

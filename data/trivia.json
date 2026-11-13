@@ -26,10 +26,10 @@
 	{
 		"id" : 103,
 		"difficulty" : "Hard",
-		"question" : "What is the pioneering technology demonstration attatched to the side of the Psyche spacecraft?",
+		"question" : "What is the pioneering technology demonstration attached to the side of the Psyche spacecraft?",
 		"correct answer" : 2,
-		"answers" : ["Multispectral Imager", "Magnetrometer", "Deep Space Optical Communications (DSOC)", "Magnetrometer"],
-		"explanation" : "DSOC is NASA's first test of high-bandwidth optical communications between Earth and distances far excceeding the Moon"
+		"answers" : ["Multispectral Imager", "Magnetometer", "Deep Space Optical Communications (DSOC)", "Gamma-Ray and Neutron Spectrometer"],
+		"explanation" : "DSOC is NASA's first test of high-bandwidth optical communications between Earth and distances far exceeding the Moon"
 	},
 	{
 		"id" : 104,
@@ -37,7 +37,8 @@
 		"question" : "What food is Psyche shaped like?",
 		"correct answer" : 2,
 		"answers" : ["Pizza", "Orange", "Potato", "Walnut"],
-		"explanation" : "Psyche has an irregular potato shape"
+		"explanation" : "Psyche has an irregular potato shape",
+		"image" : "res://assets/art/psyche.png"
 	},
 	{
 		"id" : 105,

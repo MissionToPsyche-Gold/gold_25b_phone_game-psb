@@ -36,7 +36,7 @@ func _ready() -> void:
 	_confetti.scale_amount_max = 5
 	var g := Gradient.new()
 	g.offsets = PackedFloat32Array([0.0, 0.25, 0.5, 0.75, 1.0])
-	g.colors = PackedColorArray([UIStyle.ORANGE, UIStyle.CYAN, UIStyle.PINK, UIStyle.GOLD, UIStyle.GREEN])
+	g.colors = PackedColorArray([UIStyle.ORANGE, UIStyle.MAGENTA, UIStyle.PINK, UIStyle.GOLD, UIStyle.GREEN])
 	_confetti.color_initial_ramp = g
 	add_child(_confetti)
 
@@ -64,7 +64,7 @@ func _ready() -> void:
 func set_scoreboard_mode(round_number: int) -> void:
 	_scoreboard = true
 	_title.text = "SCOREBOARD"
-	_title.add_theme_color_override("font_color", UIStyle.CYAN)
+	_title.add_theme_color_override("font_color", UIStyle.MAGENTA)
 	_reason.text = "Round %d" % round_number
 	_again.visible = false
 	_menu.text = "<  Back"

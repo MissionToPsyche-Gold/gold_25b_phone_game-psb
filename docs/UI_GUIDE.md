@@ -1,5 +1,7 @@
 # Plugging your part into the themed UI
 
+> **Updated Nov 12, 2026:** the accent `"Cyan"` is now `"Magenta"` (Psyche brand), players pick callsigns instead of typing names, questions can have an `"image"`, and each minigame needs a `"story"` in `GameStateUI.MINIGAMES`. Write a GUT test first for anything new; see `docs/TESTING.md`.
+
 The game state teammate's `GameState` and `GameFlow` are unchanged. Two lines in `controllers/game_controller.gd` now point at the themed scenes:
 
 ```gdscript
@@ -72,7 +74,7 @@ func _on_goal_reached() -> void:
 Then open `scenes/maze.tscn`, select the **Maze** root node, and drag your scene into **Minigame Scene** in the Inspector. That's all. Leave it empty to use the tap placeholder.
 
 Tips so it matches the rest of the game:
-- Use `UIStyle` colors (`UIStyle.CYAN`, `UIStyle.ORANGE`, ...) and `UIStyle.button(...)` / `UIStyle.label(...)`.
+- Use `UIStyle` colors (`UIStyle.MAGENTA`, `UIStyle.ORANGE`, ...) and `UIStyle.button(...)` / `UIStyle.label(...)`.
 - Touch only (report SO06): use on-screen arrow buttons or swipes, at least 44 × 44 px.
 - No shooting or violence (EC-2 / SE06).
 - Show any instructions as text (SP03). `TimerBar` already shows seconds in text.

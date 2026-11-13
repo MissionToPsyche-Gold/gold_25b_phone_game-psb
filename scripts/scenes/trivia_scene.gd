@@ -1,8 +1,8 @@
 extends Control
 ## GameFlow "trivia" phase (res://scenes/trivia.tscn).
 ## Themed trivia turn using the attempt-token pattern from INTEGRATION.md.
-## Questions come from the placeholder QuestionBank autoload; the trivia
-## teammate can swap in their own question logic here (see docs/UI_GUIDE.md).
+## Questions come from the QuestionBank autoload (data/trivia.json). A question
+## with an "image" field (a res:// path) shows that picture above the answers.
 
 var screen: TriviaScreen
 var pause: PauseOverlay
@@ -36,6 +36,8 @@ func _ready() -> void:
 	pause.resume_pressed.connect(func(): pause.visible = false)
 	pause.quit_pressed.connect(GameStateUI.quit_to_menu)
 	screen.show_question(GameStateUI.player_dict(player), round_number, question.get_question(), question.get_answers())
+	if question.has_image() and ResourceLoader.exists(question.get_image_path()):
+		screen.set_question_image(load(question.get_image_path()))
 	screen.on_shown()
 
 

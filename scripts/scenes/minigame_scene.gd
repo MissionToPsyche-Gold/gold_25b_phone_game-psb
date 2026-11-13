@@ -33,7 +33,8 @@ func _ready() -> void:
 	add_child(screen)
 	screen.start_pressed.connect(_start)
 	screen.result_continue_pressed.connect(GameFlow.open_current)
-	screen.show_intro(GameStateUI.player_dict(player), info.title, info.how, info.time_text, info.reward_text)
+	screen.show_intro(GameStateUI.player_dict(player), info.title, info.how, info.time_text,
+		info.reward_text, str(info.get("story", "")))
 
 
 func _start() -> void:

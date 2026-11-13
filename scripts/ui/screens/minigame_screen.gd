@@ -17,6 +17,7 @@ var _result: Control
 var _in_chip: ColorRect
 var _in_player: Label
 var _in_title: Label
+var _in_story: Label
 var _in_body: Label
 var _in_limit: Label
 var _in_reward: Label
@@ -62,8 +63,10 @@ func _build_intro() -> Control:
 	who.add_child(_in_chip)
 	_in_player = UIStyle.label("", UIStyle.FONT_BODY, UIStyle.TEXT, true, HORIZONTAL_ALIGNMENT_CENTER, false)
 	who.add_child(_in_player)
-	_in_title = UIStyle.heading("", UIStyle.FONT_H1, UIStyle.CYAN)
+	_in_title = UIStyle.heading("", UIStyle.FONT_H1, UIStyle.MAGENTA)
 	col.add_child(_in_title)
+	_in_story = UIStyle.label("", UIStyle.FONT_BODY, UIStyle.GOLD, true, HORIZONTAL_ALIGNMENT_CENTER)
+	col.add_child(_in_story)
 	_in_body = UIStyle.label("", UIStyle.FONT_BODY, UIStyle.TEXT, false, HORIZONTAL_ALIGNMENT_CENTER)
 	col.add_child(_in_body)
 	var facts := UIStyle.hbox(10)
@@ -104,11 +107,11 @@ func _build_play() -> Control:
 	_pl_player.size_flags_horizontal = SIZE_EXPAND_FILL
 	_pl_player.clip_text = true
 	top.add_child(_pl_player)
-	_pl_title = UIStyle.label("", UIStyle.FONT_BODY, UIStyle.CYAN, true, HORIZONTAL_ALIGNMENT_RIGHT, false)
+	_pl_title = UIStyle.label("", UIStyle.FONT_BODY, UIStyle.MAGENTA, true, HORIZONTAL_ALIGNMENT_RIGHT, false)
 	top.add_child(_pl_title)
 	timer_bar = TimerBar.new()
 	bcol.add_child(timer_bar)
-	var stage := UIStyle.panel("Cyan")
+	var stage := UIStyle.panel("Magenta")
 	stage.size_flags_vertical = SIZE_EXPAND_FILL
 	content.add_child(stage)
 	_slot = Control.new()
@@ -151,14 +154,17 @@ func _show_view(v: Control) -> void:
 
 
 ## time_limit_text e.g. "30 seconds"; reward_text e.g. "Win: +10 pts"
+## story: optional mission briefing shown under the title (sponsor request).
 func show_intro(player: Dictionary, title: String, instructions: String,
-		time_limit_text: String, reward_text: String) -> void:
+		time_limit_text: String, reward_text: String, story := "") -> void:
 	var id: int = player.get("id", 0)
 	_in_chip.color = UIStyle.player_color(id)
 	_in_player.text = "%s's challenge" % player.get("name", "Player")
 	_in_player.add_theme_color_override("font_color", UIStyle.player_color(id))
 	_in_card.theme_type_variation = UIStyle.player_accent(id) + "Panel"
 	_in_title.text = title
+	_in_story.text = story
+	_in_story.visible = story != ""
 	_in_body.text = instructions
 	_in_limit.text = time_limit_text
 	_in_reward.text = reward_text
@@ -167,7 +173,7 @@ func show_intro(player: Dictionary, title: String, instructions: String,
 
 
 ## Switches to the play view and returns the empty slot. Add your minigame
-## node as a child of the returned Control (it fills the cyan box).
+## node as a child of the returned Control (it fills the magenta box).
 func begin_play(player: Dictionary, title: String) -> Control:
 	var id: int = player.get("id", 0)
 	_pl_chip.color = UIStyle.player_color(id)
