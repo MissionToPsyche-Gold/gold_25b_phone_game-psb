@@ -1,0 +1,233 @@
+2026-11-12T18:55:28-05:00
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+---  GUT  ---
+[1m[INFO]:  [0musing [/root/.local/share/godot/app_userdata/Cosmic Quest- Psyche] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+[4m
+res://tests/unit/test_ts001_player_setup.gd
+[0m* test_tc001_player_count_limits
+* test_tc002_callsign_list_is_valid
+[31m    [Failed]:  [0mExpected [<null>] to be anything but NULL:  Callsigns script should exist
+      at line 32
+* test_tc003_no_free_text_entry
+[31m    [Failed]:  [0m[4] expected to equal [0]:  Setup must not contain any LineEdit
+      at line 50
+* test_tc004_duplicate_callsign_rejected
+[31m    [Failed]:  [0mSetup screen should have set_callsign()
+      at line 56
+* test_tc005_confirm_emits_selected_callsigns
+[31m    [Failed]:  [0mSetup screen should have get_selected_names()
+      at line 68
+[1m1/5 passed.
+[0m[4m
+res://tests/unit/test_ts002_turns_scoring_lives.gd
+[0m* test_tc006_correct_answer_scores_once
+* test_tc007_wrong_answer_costs_life
+* test_tc008_eliminated_player_skipped
+* test_tc009_game_ends_with_one_survivor
+[1m4/4 passed.
+[0m[4m
+res://tests/unit/test_ts003_question_bank.gd
+[0m* test_tc010_question_data_is_valid
+[31m    [Failed]:  [0m[3] expected to equal [4]:  Answers are all different: question 103.0
+      at line 36
+* test_tc011_no_repeats_in_session
+* test_tc012_falls_back_to_other_difficulty
+[31m    [Failed]:  [0mExpected [<null>] to be anything but NULL:  Medium/Hard questions remain, so a question must be returned
+      at line 61
+* test_tc013_optional_question_image
+[31m    [Failed]:  [0mTriviaQuestion should have has_image()
+      at line 70
+* test_tc014_malformed_record_rejected
+[31m    [Failed]:  [0mExpected [ARRAY(["_ready", "_init", "is_correct", "get_difficulty", "get_question", "get_answers", "get_correct_index", "get_explanation", "_used", "set_used", "_process"])] to contain value:  ["is_valid_record"]:  TriviaQuestion should have is_valid_record()
+      at line 85
+[1m1/5 passed.
+[0m[4m
+res://tests/unit/test_ts004_trivia_screen.gd
+[0m* test_tc015_first_tap_only
+* test_tc016_feedback_shows_answer_and_explanation
+* test_tc017_question_image_shown_only_when_present
+[31m    [Failed]:  [0mTriviaScreen should have set_question_image()
+      at line 42
+[1m2/3 passed.
+[0m[4m
+res://tests/unit/test_ts005_maze.gd
+[0m* test_tc018_all_presets_solvable
+* test_tc019_wall_blocks_movement
+Maze: round 1, difficulty: Easy, preset: 4
+* test_tc020_goal_wins_once
+Maze: round 1, difficulty: Easy, preset: 2
+* test_tc021_timeout_loses
+Maze: round 1, difficulty: Easy, preset: 3
+* test_tc022_difficulty_by_round_and_seeded
+Maze: round 1, difficulty: Easy, preset: 4
+Maze: round 3, difficulty: Hard, preset: 4
+Maze: round 3, difficulty: Hard, preset: 2
+Maze: round 3, difficulty: Hard, preset: 2
+[1m5/5 passed.
+[0m[4m
+res://tests/unit/test_ts008_look_accessibility.gd
+[0m* test_tc029_minimum_text_and_touch_sizes
+* test_tc030_brand_magenta_no_turquoise
+[31m    [Failed]:  [0mPalette has a Magenta accent
+      at line 19
+[31m    [Failed]:  [0mColor 5fd4ff is turquoise/cyan
+      at line 26
+[31m    [Failed]:  [0mColor 5fd4ff is turquoise/cyan
+      at line 26
+[1m1/2 passed.
+[0m[4m
+res://tests/integration/test_ts006_bonus_challenge.gd
+[0m* test_tc023_every_minigame_has_story
+[31m    [Failed]:  [0mmaze has a story
+      at line 34
+* test_tc024_intro_shows_story
+[31m    [Failed]:  [0mExpected 'BONUS CHALLENGE
+    Metal Core's challenge
+    Maze
+    Guide the spacecraft through the maze to the goal before time runs out. Bumping a wall won't move you.
+    30 seconds
+    Win: +1 life
+    ' to contain '<no story>', match_case=Intro card shows the story
+      at line 47
+* test_tc025_maze_win_restores_one_life_once
+Maze: round 1, difficulty: Easy, preset: 2
+[1m1/3 passed.
+[0m[4m
+res://tests/integration/test_ts007_about_navigation.gd
+[0m* test_tc026_menu_has_about_button
+[31m    [Failed]:  [0mMenu has an About button
+      at line 38
+* test_tc027_about_lists_team
+[31m    [Failed]:  [0mExpected [<null>] to be anything but NULL:  About scene exists
+      at line 44
+* test_tc028_about_shows_disclaimer_and_credits
+[31m    [Failed]:  [0mExpected [<null>] to be anything but NULL:  About scene exists
+      at line 57
+[1m0/3 passed.
+[0m[4m
+res://tests/integration/test_ts008_screen_fit.gd
+[0m* test_tc031_screens_fit_phone_width
+[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[31m    [Failed]:  [0mres://scenes/about.tscn exists
+      at line 18
+[1m0/1 passed.
+[0m[4m
+res://tests/integration/test_ts009_game_flow.gd
+[0m* test_tc032_full_session_reaches_results
+[31m    [Failed]:  [0m[STRING_NAME(PlayerSetup)] expected to equal ["PlayerHandoff"]:  Handoff before trivia turn 1
+      at line 27
+[31m    [Failed]:  [0m[STRING_NAME(PlayerSetup)] expected to equal ["Trivia"]:  
+      at line 30
+SCRIPT ERROR: Invalid access to property or key 'question' on a base object of type 'Control (player_setup_scene.gd)'.
+          at: test_tc032_full_session_reaches_results (res://tests/integration/test_ts009_game_flow.gd:31)
+          GDScript backtrace (most recent call first):
+              [0] test_tc032_full_session_reaches_results (res://tests/integration/test_ts009_game_flow.gd:31)
+              [1] _end_wait (res://addons/gut/awaiter.gd:126)
+              [2] _on_tree_physics_frame (res://addons/gut/awaiter.gd:78)
+[31m    [Failed]:  [0mUnexpected Errors:
+    [1] <engine-2>Invalid access to property or key 'question' on a base object of type 'Control (player_setup_scene.gd)'.
+      at line 31
+* test_tc033_play_again_resets
+[1m1/2 passed.
+[0m
+[33m==============================================
+[0m[33m= Run Summary
+[0m[33m==============================================
+[0m[4m
+res://tests/unit/test_ts001_player_setup.gd
+[0m- test_tc002_callsign_list_is_valid
+[31m    [Failed]:  [0mExpected [<null>] to be anything but NULL:  Callsigns script should exist
+          at line 32
+- test_tc003_no_free_text_entry
+[31m    [Failed]:  [0m[4] expected to equal [0]:  Setup must not contain any LineEdit
+          at line 50
+- test_tc004_duplicate_callsign_rejected
+[31m    [Failed]:  [0mSetup screen should have set_callsign()
+          at line 56
+- test_tc005_confirm_emits_selected_callsigns
+[31m    [Failed]:  [0mSetup screen should have get_selected_names()
+          at line 68
+[4m
+res://tests/unit/test_ts003_question_bank.gd
+[0m- test_tc010_question_data_is_valid
+[31m    [Failed]:  [0m[3] expected to equal [4]:  Answers are all different: question 103.0
+          at line 36
+- test_tc012_falls_back_to_other_difficulty
+[31m    [Failed]:  [0mExpected [<null>] to be anything but NULL:  Medium/Hard questions remain, so a question must be returned
+          at line 61
+- test_tc013_optional_question_image
+[31m    [Failed]:  [0mTriviaQuestion should have has_image()
+          at line 70
+- test_tc014_malformed_record_rejected
+[31m    [Failed]:  [0mExpected [ARRAY(["_ready", "_init", "is_correct", "get_difficulty", "get_question", "get_answers", "get_correct_index", "get_explanation", "_used", "set_used", "_process"])] to contain value:  ["is_valid_record"]:  TriviaQuestion should have is_valid_record()
+          at line 85
+[4m
+res://tests/unit/test_ts004_trivia_screen.gd
+[0m- test_tc017_question_image_shown_only_when_present
+[31m    [Failed]:  [0mTriviaScreen should have set_question_image()
+          at line 42
+[4m
+res://tests/unit/test_ts008_look_accessibility.gd
+[0m- test_tc030_brand_magenta_no_turquoise
+[31m    [Failed]:  [0mPalette has a Magenta accent
+          at line 19
+[31m    [Failed]:  [0mColor 5fd4ff is turquoise/cyan
+          at line 26
+[31m    [Failed]:  [0mColor 5fd4ff is turquoise/cyan
+          at line 26
+[4m
+res://tests/integration/test_ts006_bonus_challenge.gd
+[0m- test_tc023_every_minigame_has_story
+[31m    [Failed]:  [0mmaze has a story
+          at line 34
+- test_tc024_intro_shows_story
+[31m    [Failed]:  [0mExpected 'BONUS CHALLENGE
+    Metal Core's challenge
+    Maze
+    Guide the spacecraft through the maze to the goal before time runs out. Bumping a wall won't move you.
+    30 seconds
+    Win: +1 life
+    ' to contain '<no story>', match_case=Intro card shows the story
+          at line 47
+[4m
+res://tests/integration/test_ts007_about_navigation.gd
+[0m- test_tc026_menu_has_about_button
+[31m    [Failed]:  [0mMenu has an About button
+          at line 38
+- test_tc027_about_lists_team
+[31m    [Failed]:  [0mExpected [<null>] to be anything but NULL:  About scene exists
+          at line 44
+- test_tc028_about_shows_disclaimer_and_credits
+[31m    [Failed]:  [0mExpected [<null>] to be anything but NULL:  About scene exists
+          at line 57
+[4m
+res://tests/integration/test_ts008_screen_fit.gd
+[0m- test_tc031_screens_fit_phone_width
+[31m    [Failed]:  [0mres://scenes/about.tscn exists
+          at line 18
+[4m
+res://tests/integration/test_ts009_game_flow.gd
+[0m- test_tc032_full_session_reaches_results
+[31m    [Failed]:  [0m[STRING_NAME(PlayerSetup)] expected to equal ["PlayerHandoff"]:  Handoff before trivia turn 1
+          at line 27
+[31m    [Failed]:  [0m[STRING_NAME(PlayerSetup)] expected to equal ["Trivia"]:  
+          at line 30
+[31m    [Failed]:  [0mUnexpected Errors:
+    [1] <engine-2>Invalid access to property or key 'question' on a base object of type 'Control (player_setup_scene.gd)'.
+          at line 31
+Totals
+------
+Scripts              10
+Tests                33
+Passing Tests        16
+Failing Tests        17
+Asserts           410/431
+Time              5.969s
+[31m---- 17 failing tests ----
+[0m
+Results saved to user://gut_results_1794527735.23597.xml

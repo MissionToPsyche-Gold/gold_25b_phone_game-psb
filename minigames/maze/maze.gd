@@ -170,7 +170,9 @@ var _start := Vector2i.ZERO # start position
 var _endgoal := Vector2i.ZERO # end position
 var _player := Vector2i.ZERO # player position
 
-var testing_hotkeys: bool = true
+# F = force fail, W = force win, for quick demos. Only in debug/editor runs,
+# never in an exported release build that players use.
+var testing_hotkeys: bool = OS.is_debug_build()
 var maze_seed: int = 0
 
 var _layout: Array = []
@@ -319,7 +321,7 @@ func _draw_arrow_keys() -> void:
 
 # Arrow key that moves player in tapped direction
 func _arrow(text: String, direction: Vector2i) -> Button:
-	var button := UIStyle.button(text, "Cyan", int(ARROW_SIZE))
+	var button := UIStyle.button(text, "Magenta", int(ARROW_SIZE))
 	button.custom_minimum_size = Vector2(ARROW_SIZE, ARROW_SIZE)
 	button.pressed.connect(func(): _move(direction))
 	return button

@@ -31,7 +31,7 @@ func _ready() -> void:
 	add_child(col)
 	col.add_child(UIStyle.label("Placeholder: the real %s goes here." % title,
 		UIStyle.FONT_SMALL, UIStyle.TEXT_DIM, false, HORIZONTAL_ALIGNMENT_CENTER))
-	_count = UIStyle.label("", UIStyle.FONT_H2, UIStyle.CYAN, true, HORIZONTAL_ALIGNMENT_CENTER)
+	_count = UIStyle.label("", UIStyle.FONT_H2, UIStyle.MAGENTA, true, HORIZONTAL_ALIGNMENT_CENTER)
 	col.add_child(_count)
 	var holder := CenterContainer.new()
 	col.add_child(holder)

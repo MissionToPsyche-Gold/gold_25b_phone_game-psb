@@ -36,17 +36,17 @@ var _card: PanelContainer
 
 func _ready() -> void:
 	add_theme_constant_override("separation", UIStyle.GAP)
-	_card = UIStyle.panel("Cyan")
+	_card = UIStyle.panel("Magenta")
 	_card.size_flags_vertical = SIZE_EXPAND_FILL
 	add_child(_card)
 	var col := UIStyle.vbox(14)
 	_card.add_child(col)
-	_count = UIStyle.label("", UIStyle.FONT_SMALL, UIStyle.CYAN, false, HORIZONTAL_ALIGNMENT_RIGHT)
+	_count = UIStyle.label("", UIStyle.FONT_SMALL, UIStyle.MAGENTA, false, HORIZONTAL_ALIGNMENT_RIGHT)
 	col.add_child(_count)
 	_icon = RuleIcon.new()
 	_icon.custom_minimum_size.y = 84
 	col.add_child(_icon)
-	_title = UIStyle.label("", UIStyle.FONT_H2, UIStyle.CYAN, true, HORIZONTAL_ALIGNMENT_CENTER)
+	_title = UIStyle.label("", UIStyle.FONT_H2, UIStyle.MAGENTA, true, HORIZONTAL_ALIGNMENT_CENTER)
 	col.add_child(_title)
 	_body = UIStyle.label("", UIStyle.FONT_BODY, UIStyle.TEXT, false, HORIZONTAL_ALIGNMENT_CENTER)
 	col.add_child(_body)
@@ -57,7 +57,7 @@ func _ready() -> void:
 	_back.size_flags_horizontal = SIZE_EXPAND_FILL
 	_back.pressed.connect(_on_back)
 	nav.add_child(_back)
-	_next = UIStyle.button("Next >", "Cyan")
+	_next = UIStyle.button("Next >", "Magenta")
 	_next.size_flags_horizontal = SIZE_EXPAND_FILL
 	_next.pressed.connect(_on_next)
 	nav.add_child(_next)
@@ -77,7 +77,7 @@ func show_page(i: int, animate := true) -> void:
 	_count.text = "%d / %d" % [_page + 1, PAGES.size()]
 	var last := _page == PAGES.size() - 1
 	_next.text = finish_text if last else "Next >"
-	_next.accent = "Orange" if last else "Cyan"
+	_next.accent = "Orange" if last else "Magenta"
 	if animate and not GameSettings.reduce_motion:
 		_card.modulate.a = 0.0
 		var tw := create_tween()

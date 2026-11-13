@@ -1,0 +1,99 @@
+2026-11-12T18:58:54-05:00
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+---  GUT  ---
+[1m[INFO]:  [0musing [/root/.local/share/godot/app_userdata/Cosmic Quest- Psyche] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+[4m
+res://tests/unit/test_ts001_player_setup.gd
+[0m* test_tc001_player_count_limits
+* test_tc002_callsign_list_is_valid
+* test_tc003_no_free_text_entry
+* test_tc004_duplicate_callsign_rejected
+* test_tc005_confirm_emits_selected_callsigns
+[1m5/5 passed.
+[0m[4m
+res://tests/unit/test_ts002_turns_scoring_lives.gd
+[0m* test_tc006_correct_answer_scores_once
+* test_tc007_wrong_answer_costs_life
+* test_tc008_eliminated_player_skipped
+* test_tc009_game_ends_with_one_survivor
+[1m4/4 passed.
+[0m[4m
+res://tests/unit/test_ts003_question_bank.gd
+[0m* test_tc010_question_data_is_valid
+* test_tc011_no_repeats_in_session
+* test_tc012_falls_back_to_other_difficulty
+* test_tc013_optional_question_image
+* test_tc014_malformed_record_rejected
+[1m5/5 passed.
+[0m[4m
+res://tests/unit/test_ts004_trivia_screen.gd
+[0m* test_tc015_first_tap_only
+* test_tc016_feedback_shows_answer_and_explanation
+* test_tc017_question_image_shown_only_when_present
+[1m3/3 passed.
+[0m[4m
+res://tests/unit/test_ts005_maze.gd
+[0m* test_tc018_all_presets_solvable
+* test_tc019_wall_blocks_movement
+Maze: round 1, difficulty: Easy, preset: 1
+* test_tc020_goal_wins_once
+Maze: round 1, difficulty: Easy, preset: 3
+* test_tc021_timeout_loses
+Maze: round 1, difficulty: Easy, preset: 4
+* test_tc022_difficulty_by_round_and_seeded
+Maze: round 1, difficulty: Easy, preset: 4
+Maze: round 3, difficulty: Hard, preset: 4
+Maze: round 3, difficulty: Hard, preset: 2
+Maze: round 3, difficulty: Hard, preset: 2
+[1m5/5 passed.
+[0m[4m
+res://tests/unit/test_ts008_look_accessibility.gd
+[0m* test_tc029_minimum_text_and_touch_sizes
+* test_tc030_brand_magenta_no_turquoise
+[1m2/2 passed.
+[0m[4m
+res://tests/integration/test_ts006_bonus_challenge.gd
+[0m* test_tc023_every_minigame_has_story
+* test_tc024_intro_shows_story
+* test_tc025_maze_win_restores_one_life_once
+Maze: round 1, difficulty: Easy, preset: 2
+[1m3/3 passed.
+[0m[4m
+res://tests/integration/test_ts007_about_navigation.gd
+[0m* test_tc026_menu_has_about_button
+* test_tc027_about_lists_team
+* test_tc028_about_shows_disclaimer_and_credits
+[1m3/3 passed.
+[0m[4m
+res://tests/integration/test_ts008_screen_fit.gd
+[0m* test_tc031_screens_fit_phone_width
+[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[1m1/1 passed.
+[0m[4m
+res://tests/integration/test_ts009_game_flow.gd
+[0m* test_tc032_full_session_reaches_results
+Maze: round 1, difficulty: Easy, preset: 1
+Maze: round 1, difficulty: Easy, preset: 1
+* test_tc033_play_again_resets
+[1m2/2 passed.
+[0m
+[33m==============================================
+[0m[33m= Run Summary
+[0m[33m==============================================
+[0m
+Totals
+------
+Scripts              10
+Tests                33
+Passing Tests        33
+Asserts             572
+Time              8.005s
+[32m---- All tests passed! ----
+[0m
+Results saved to user://gut_results_1794527943.30634.xml

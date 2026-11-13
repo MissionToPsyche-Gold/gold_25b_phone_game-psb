@@ -1,0 +1,375 @@
+2026-11-12T19:13:47-05:00
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+---  GUT  ---
+[1m[INFO]:  [0musing [/root/.local/share/godot/app_userdata/Cosmic Quest- Psyche] for temporary output.
+Godot version:  4.7.2
+GUT version:  9.7.1
+[4m
+res://tests/unit/test_ts001_player_setup.gd
+[0m* test_tc001_player_count_limits
+* test_tc002_callsign_list_is_valid
+* test_tc003_no_free_text_entry
+* test_tc004_duplicate_callsign_rejected
+* test_tc005_confirm_emits_selected_callsigns
+[1m5/5 passed.
+[0m[4m
+res://tests/unit/test_ts002_turns_scoring_lives.gd
+[0m* test_tc006_correct_answer_scores_once
+* test_tc007_wrong_answer_costs_life
+* test_tc008_eliminated_player_skipped
+* test_tc009_game_ends_with_one_survivor
+[1m4/4 passed.
+[0m[4m
+res://tests/unit/test_ts003_question_bank.gd
+[0m* test_tc010_question_data_is_valid
+* test_tc011_no_repeats_in_session
+* test_tc012_falls_back_to_other_difficulty
+* test_tc013_optional_question_image
+* test_tc014_malformed_record_rejected
+[1m5/5 passed.
+[0m[4m
+res://tests/unit/test_ts004_trivia_screen.gd
+[0m* test_tc015_first_tap_only
+* test_tc016_feedback_shows_answer_and_explanation
+* test_tc017_question_image_shown_only_when_present
+[1m3/3 passed.
+[0m[4m
+res://tests/unit/test_ts005_maze.gd
+[0m* test_tc018_all_presets_solvable
+* test_tc019_wall_blocks_movement
+Maze: round 1, difficulty: Easy, preset: 3
+* test_tc020_goal_wins_once
+Maze: round 1, difficulty: Easy, preset: 1
+* test_tc021_timeout_loses
+Maze: round 1, difficulty: Easy, preset: 4
+* test_tc022_difficulty_by_round_and_seeded
+Maze: round 1, difficulty: Easy, preset: 4
+Maze: round 3, difficulty: Hard, preset: 4
+Maze: round 3, difficulty: Hard, preset: 2
+Maze: round 3, difficulty: Hard, preset: 2
+[1m5/5 passed.
+[0m[4m
+res://tests/unit/test_ts008_look_accessibility.gd
+[0m* test_tc029_minimum_text_and_touch_sizes
+* test_tc030_brand_magenta_no_turquoise
+[1m2/2 passed.
+[0m[4m
+res://tests/integration/test_ts006_bonus_challenge.gd
+[0m* test_tc023_every_minigame_has_story
+* test_tc024_intro_shows_story
+* test_tc025_maze_win_restores_one_life_once
+Maze: round 1, difficulty: Easy, preset: 1
+[1m3/3 passed.
+[0m[4m
+res://tests/integration/test_ts007_about_navigation.gd
+[0m* test_tc026_menu_has_about_button
+* test_tc027_about_lists_team_only
+[31m    [Failed]:  [0mNo 'Advisors' section
+      at line 54
+[31m    [Failed]:  [0mNo 'Resources' section
+      at line 54
+[31m    [Failed]:  [0mNo 'Credits' section
+      at line 54
+* test_tc028_about_explains_project_and_mission
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain 'About this game', match_case=true
+      at line 65
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain 'pass-and-play', match_case=true
+      at line 66
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain 'The Psyche mission', match_case=true
+      at line 67
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain 'metal-rich asteroid', match_case=true
+      at line 68
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain '2029', match_case=true
+      at line 69
+[1m1/3 passed.
+[0m[4m
+res://tests/integration/test_ts008_screen_fit.gd
+[0m* test_tc031_screens_fit_phone_width
+[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[33m    --- Awaiting 1.2 seconds  ---
+[0m[1m1/1 passed.
+[0m[4m
+res://tests/integration/test_ts009_game_flow.gd
+[0m* test_tc032_full_session_reaches_results
+Maze: round 1, difficulty: Easy, preset: 3
+Maze: round 1, difficulty: Easy, preset: 1
+* test_tc033_play_again_resets
+[1m2/2 passed.
+[0m
+[33m==============================================
+[0m[33m= Run Summary
+[0m[33m==============================================
+[0m[4m
+res://tests/integration/test_ts007_about_navigation.gd
+[0m- test_tc027_about_lists_team_only
+[31m    [Failed]:  [0mNo 'Advisors' section
+          at line 54
+[31m    [Failed]:  [0mNo 'Resources' section
+          at line 54
+[31m    [Failed]:  [0mNo 'Credits' section
+          at line 54
+- test_tc028_about_explains_project_and_mission
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain 'About this game', match_case=true
+          at line 65
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain 'pass-and-play', match_case=true
+          at line 66
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain 'The Psyche mission', match_case=true
+          at line 67
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain 'metal-rich asteroid', match_case=true
+          at line 68
+[31m    [Failed]:  [0mExpected 'ABOUT
+    The team
+    Ella Mariani
+    Sanjith Varathan
+    Savannah Wilhelm
+    Gerardo Saca
+    Software Engineering students, Penn State World Campus
+    Advisors
+    Naseem Ibrahim
+    Course Instructor and Faculty Advisor
+    Cassie Bowman
+    Project Mentor, NASA Psyche Mission
+    Resources
+    Mission facts: NASA Psyche Mission Press Kit (September 2023)
+    Colors: NASA Psyche Mission Brand Guide
+    Learn more: psyche.asu.edu and science.nasa.gov/mission/psyche
+    Credits
+    Built with the Godot Engine (MIT License)
+    Tested with GUT, Godot Unit Test (MIT License)
+    Fonts: Jersey 10 and DotGothic16, SIL Open Font License 1.1
+    Pixel art: made for this game by the team
+    Disclaimer
+    This work was created in partial fulfillment of Penn State World Campus Capstone Course SWENG 480: Software Engineering Design. The work is a result of the Psyche Student Collaborations component of NASA's Psyche Mission. "Psyche: A Journey to a Metal World" [Contract number NNM16AA09C] is part of the NASA Discovery Program mission to solar system targets. Trade names and trademarks of ASU and NASA are used in this work for identification only. Their usage does not constitute an official endorsement, either expressed or implied, by Arizona State University or National Aeronautics and Space Administration. The content is solely the responsibility of the authors and does not necessarily represent the official views of ASU or NASA.
+    <  Back
+    ' to contain '2029', match_case=true
+          at line 69
+Totals
+------
+Scripts              10
+Tests                33
+Passing Tests        31
+Failing Tests         2
+Asserts           567/575
+Time              7.983s
+[31m---- 2 failing tests ----
+[0m
+Results saved to user://gut_results_1794528836.84719.xml

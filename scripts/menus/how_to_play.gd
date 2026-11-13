@@ -10,7 +10,7 @@ func _ready() -> void:
 	add_child(column)
 	var content := UIStyle.vbox(14)
 	column.add_child(content)
-	content.add_child(UIStyle.heading("HOW TO PLAY", UIStyle.FONT_H1, UIStyle.CYAN))
+	content.add_child(UIStyle.heading("HOW TO PLAY", UIStyle.FONT_H1, UIStyle.MAGENTA))
 	var pager := RulesPager.new()
 	pager.finish_text = "Got it!"
 	pager.size_flags_vertical = SIZE_EXPAND_FILL

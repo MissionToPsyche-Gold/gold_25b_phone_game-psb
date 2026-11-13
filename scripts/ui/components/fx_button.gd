@@ -2,9 +2,9 @@ class_name FxButton
 extends Button
 ## Game-feel button: squishes instantly when tapped (report PP-1: feedback in
 ## under 200 ms), grows slightly on mouse hover, plays an optional sound.
-## Pick a color with `accent` (Purple, Orange, Cyan, Pink, Green, Red, Gold).
+## Pick a color with `accent` (Purple, Orange, Magenta, Blue, Pink, Green, Red, Gold).
 
-@export_enum("Purple", "Orange", "Cyan", "Pink", "Green", "Red", "Gold") var accent: String = "Purple":
+@export_enum("Purple", "Orange", "Magenta", "Blue", "Pink", "Green", "Red", "Gold") var accent: String = "Purple":
 	set(value):
 		accent = value
 		theme_type_variation = value + "Button"

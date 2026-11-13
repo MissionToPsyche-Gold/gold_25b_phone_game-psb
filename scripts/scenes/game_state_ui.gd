@@ -8,10 +8,14 @@ const MENU_SCENE := "res://scenes/main_menu.tscn"
 
 ## Display text for each minigame activity. When a new minigame is added to
 ## GameState (e.g. "memory_tiles"), add its entry here.
+## "story" is a one- or two-sentence mission briefing tied to the real Psyche
+## mission (sponsor request: make each challenge part of Psyche's story).
+## Facts come from the NASA Psyche Press Kit (September 2023).
 const MINIGAMES := {
 	"maze": {
-		"title": "Maze",
-		"how": "Guide the spacecraft through the maze to the goal before time runs out. Bumping a wall won't move you.",
+		"title": "Race to Psyche",
+		"story": "Help the spacecraft reach Psyche! The real Psyche spacecraft flies about 2.2 billion miles and gets a speed boost from Mars' gravity on the way.",
+		"how": "Use the arrows to fly from Earth to Psyche before time runs out. Bumping into a wall won't move you.",
 		"time_text": "30 seconds",
 		"seconds": 30.0,
 		"reward_text": "Win: +1 life",
