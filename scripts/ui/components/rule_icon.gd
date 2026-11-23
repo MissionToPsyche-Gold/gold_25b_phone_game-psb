@@ -40,7 +40,7 @@ func _draw_phone(x: float, y: float, screen: Color) -> void:
 
 func _draw_pass(t: float) -> void:
 	# two players; phone slides from one to the other
-	var colors := [UIStyle.ORANGE, UIStyle.CYAN]
+	var colors := [UIStyle.ORANGE, UIStyle.MAGENTA]
 	for i in 2:
 		var x := 2 + i * 22
 		_p(x + 1, 3, 4, 4, colors[i])            # head
@@ -84,7 +84,7 @@ func _draw_minigame(t: float) -> void:
 	var step := int(t * 2.0) % 6
 	for i in 9:
 		var on: bool = step < 4 and lit[step] == i
-		var c := UIStyle.CYAN if on else Color("#3b2a6e")
+		var c := UIStyle.MAGENTA if on else Color("#3b2a6e")
 		_p(9 + (i % 3) * 4.2, 1 + floorf(i / 3.0) * 5.4, 3.4, 4.6, c)
 
 

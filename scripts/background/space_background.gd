@@ -142,4 +142,4 @@ class _OrbitLine extends Control:
 			var a1 := TAU * (i + 0.6) / steps - 0.35
 			var p0 := center + Vector2(cos(a0) * radius.x, sin(a0) * radius.y).rotated(-0.35)
 			var p1 := center + Vector2(cos(a1) * radius.x, sin(a1) * radius.y).rotated(-0.35)
-			draw_line(p0, p1, Color(UIStyle.CYAN, 0.45), 2.0)
+			draw_line(p0, p1, Color(UIStyle.MAGENTA, 0.45), 2.0)

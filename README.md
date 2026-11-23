@@ -41,7 +41,7 @@ The UI only displays things. It changes the game only by calling `GameState`'s o
 - **Rule text:** see `PAGES` in `scripts/ui/components/rules_pager.gd`.
 - **Button colors:** set `accent` on any `FxButton` to Orange, Cyan, Purple, Pink, Green, Red or Gold. For a plain `Button`, set Theme Type Variation to `CyanButton` (and so on). Panels work the same way (`CyanPanel`).
 
-Fonts: **Pixelify Sans** for the logo and headings, and **DotGothic16** for body text and numbers, because its digits are much easier to read. Both are under the SIL Open Font License; the license files are in `assets/fonts/` (report EL-1).
+Fonts: **Jersey 10** for the logo and headings (its C and O look different), and **DotGothic16** for body text and numbers (its 5 and S look different). Both are under the SIL Open Font License; the license files are in `assets/fonts/` (report EL-1).
 
 ## Things the team should decide (the report disagrees with itself)
 

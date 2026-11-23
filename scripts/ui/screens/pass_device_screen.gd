@@ -50,7 +50,7 @@ func _ready() -> void:
 	stats.add_child(_lives)
 	_score = UIStyle.label("0 pts", UIStyle.FONT_H2, UIStyle.GOLD, true, HORIZONTAL_ALIGNMENT_CENTER, false)
 	stats.add_child(_score)
-	_next = UIStyle.label("", UIStyle.FONT_BODY, UIStyle.CYAN, true, HORIZONTAL_ALIGNMENT_CENTER)
+	_next = UIStyle.label("", UIStyle.FONT_BODY, UIStyle.MAGENTA, true, HORIZONTAL_ALIGNMENT_CENTER)
 	col.add_child(_next)
 	col.add_child(UIStyle.label("Everyone else: no peeking!", UIStyle.FONT_SMALL, UIStyle.TEXT_DIM, false, HORIZONTAL_ALIGNMENT_CENTER))
 
@@ -60,7 +60,7 @@ func _ready() -> void:
 
 	_extra_row = UIStyle.hbox(10)
 	content.add_child(_extra_row)
-	var scores := UIStyle.button("Scores", "Cyan")
+	var scores := UIStyle.button("Scores", "Magenta")
 	scores.size_flags_horizontal = SIZE_EXPAND_FILL
 	scores.pressed.connect(scores_pressed.emit)
 	_extra_row.add_child(scores)

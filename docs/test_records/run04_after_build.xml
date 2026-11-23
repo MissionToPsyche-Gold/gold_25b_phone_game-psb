@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="GutTests" failures="0" tests="33" >
+  <testsuite name="tests/unit/test_ts001_player_setup.gd" tests="5" failures="0" skipped="0" time="0.02712" >
+      <testcase name="test_tc001_player_count_limits" assertions="5" status="pass" classname="tests/unit/test_ts001_player_setup.gd" time="0.004734" >
+      </testcase>
+      <testcase name="test_tc002_callsign_list_is_valid" assertions="74" status="pass" classname="tests/unit/test_ts001_player_setup.gd" time="0.001072" >
+      </testcase>
+      <testcase name="test_tc003_no_free_text_entry" assertions="1" status="pass" classname="tests/unit/test_ts001_player_setup.gd" time="0.009291" >
+      </testcase>
+      <testcase name="test_tc004_duplicate_callsign_rejected" assertions="3" status="pass" classname="tests/unit/test_ts001_player_setup.gd" time="0.005624" >
+      </testcase>
+      <testcase name="test_tc005_confirm_emits_selected_callsigns" assertions="4" status="pass" classname="tests/unit/test_ts001_player_setup.gd" time="0.006399" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts002_turns_scoring_lives.gd" tests="4" failures="0" skipped="0" time="0.011191" >
+      <testcase name="test_tc006_correct_answer_scores_once" assertions="4" status="pass" classname="tests/unit/test_ts002_turns_scoring_lives.gd" time="0.002946" >
+      </testcase>
+      <testcase name="test_tc007_wrong_answer_costs_life" assertions="2" status="pass" classname="tests/unit/test_ts002_turns_scoring_lives.gd" time="0.003448" >
+      </testcase>
+      <testcase name="test_tc008_eliminated_player_skipped" assertions="1" status="pass" classname="tests/unit/test_ts002_turns_scoring_lives.gd" time="0.002407" >
+      </testcase>
+      <testcase name="test_tc009_game_ends_with_one_survivor" assertions="1" status="pass" classname="tests/unit/test_ts002_turns_scoring_lives.gd" time="0.00239" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts003_question_bank.gd" tests="5" failures="0" skipped="0" time="0.010137" >
+      <testcase name="test_tc010_question_data_is_valid" assertions="324" status="pass" classname="tests/unit/test_ts003_question_bank.gd" time="0.00726" >
+      </testcase>
+      <testcase name="test_tc011_no_repeats_in_session" assertions="47" status="pass" classname="tests/unit/test_ts003_question_bank.gd" time="0.002015" >
+      </testcase>
+      <testcase name="test_tc012_falls_back_to_other_difficulty" assertions="1" status="pass" classname="tests/unit/test_ts003_question_bank.gd" time="0.000281" >
+      </testcase>
+      <testcase name="test_tc013_optional_question_image" assertions="4" status="pass" classname="tests/unit/test_ts003_question_bank.gd" time="0.000206" >
+      </testcase>
+      <testcase name="test_tc014_malformed_record_rejected" assertions="6" status="pass" classname="tests/unit/test_ts003_question_bank.gd" time="0.000375" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts004_trivia_screen.gd" tests="3" failures="0" skipped="0" time="0.011699" >
+      <testcase name="test_tc015_first_tap_only" assertions="2" status="pass" classname="tests/unit/test_ts004_trivia_screen.gd" time="0.004105" >
+      </testcase>
+      <testcase name="test_tc016_feedback_shows_answer_and_explanation" assertions="4" status="pass" classname="tests/unit/test_ts004_trivia_screen.gd" time="0.004585" >
+      </testcase>
+      <testcase name="test_tc017_question_image_shown_only_when_present" assertions="3" status="pass" classname="tests/unit/test_ts004_trivia_screen.gd" time="0.003009" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts005_maze.gd" tests="5" failures="0" skipped="0" time="0.032956" >
+      <testcase name="test_tc018_all_presets_solvable" assertions="13" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.01783" >
+      </testcase>
+      <testcase name="test_tc019_wall_blocks_movement" assertions="2" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.003201" >
+      </testcase>
+      <testcase name="test_tc020_goal_wins_once" assertions="2" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.003176" >
+      </testcase>
+      <testcase name="test_tc021_timeout_loses" assertions="2" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.00257" >
+      </testcase>
+      <testcase name="test_tc022_difficulty_by_round_and_seeded" assertions="3" status="pass" classname="tests/unit/test_ts005_maze.gd" time="0.006179" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/unit/test_ts008_look_accessibility.gd" tests="2" failures="0" skipped="0" time="0.000474" >
+      <testcase name="test_tc029_minimum_text_and_touch_sizes" assertions="4" status="pass" classname="tests/unit/test_ts008_look_accessibility.gd" time="0.000282" >
+      </testcase>
+      <testcase name="test_tc030_brand_magenta_no_turquoise" assertions="14" status="pass" classname="tests/unit/test_ts008_look_accessibility.gd" time="0.000192" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/integration/test_ts006_bonus_challenge.gd" tests="3" failures="0" skipped="0" time="0.110537" >
+      <testcase name="test_tc023_every_minigame_has_story" assertions="3" status="pass" classname="tests/integration/test_ts006_bonus_challenge.gd" time="0.002903" >
+      </testcase>
+      <testcase name="test_tc024_intro_shows_story" assertions="2" status="pass" classname="tests/integration/test_ts006_bonus_challenge.gd" time="0.03996" >
+      </testcase>
+      <testcase name="test_tc025_maze_win_restores_one_life_once" assertions="3" status="pass" classname="tests/integration/test_ts006_bonus_challenge.gd" time="0.067674" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/integration/test_ts007_about_navigation.gd" tests="3" failures="0" skipped="0" time="0.127595" >
+      <testcase name="test_tc026_menu_has_about_button" assertions="3" status="pass" classname="tests/integration/test_ts007_about_navigation.gd" time="0.045855" >
+      </testcase>
+      <testcase name="test_tc027_about_lists_team" assertions="7" status="pass" classname="tests/integration/test_ts007_about_navigation.gd" time="0.035575" >
+      </testcase>
+      <testcase name="test_tc028_about_shows_disclaimer_and_credits" assertions="4" status="pass" classname="tests/integration/test_ts007_about_navigation.gd" time="0.046165" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/integration/test_ts008_screen_fit.gd" tests="1" failures="0" skipped="0" time="6.010249" >
+      <testcase name="test_tc031_screens_fit_phone_width" assertions="10" status="pass" classname="tests/integration/test_ts008_screen_fit.gd" time="6.010249" >
+      </testcase>
+  </testsuite>
+  <testsuite name="tests/integration/test_ts009_game_flow.gd" tests="2" failures="0" skipped="0" time="1.154485" >
+      <testcase name="test_tc032_full_session_reaches_results" assertions="12" status="pass" classname="tests/integration/test_ts009_game_flow.gd" time="1.05677" >
+      </testcase>
+      <testcase name="test_tc033_play_again_resets" assertions="2" status="pass" classname="tests/integration/test_ts009_game_flow.gd" time="0.097715" >
+      </testcase>
+  </testsuite>
+</testsuites>

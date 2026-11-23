@@ -1,10 +1,11 @@
 extends Control
-## Start screen: animated space scene, logo, and three buttons.
+## Start screen: animated space scene, logo, and four buttons.
 ## The logo drops in, buttons pop in one by one, then the logo gently bobs.
 
 const GAME_SCENE := "res://scenes/player_setup.tscn"   # GameFlow "setup" phase
 const HOW_TO_PLAY_SCENE := "res://scenes/how_to_play.tscn"
 const SETTINGS_SCENE := "res://scenes/settings.tscn"
+const ABOUT_SCENE := "res://scenes/about.tscn"
 
 var _logo: Control
 var _buttons: Array[FxButton] = []
@@ -21,14 +22,15 @@ func _ready() -> void:
 
 	_logo = _build_logo()
 	content.add_child(_logo)
-	content.add_child(UIStyle.spacer(36, false))
+	content.add_child(UIStyle.spacer(26, false))
 
-	var buttons := UIStyle.vbox(14)
+	var buttons := UIStyle.vbox(12)
 	content.add_child(buttons)
 	for spec in [["Start mission", "Orange", GAME_SCENE],
-			["How to play", "Cyan", HOW_TO_PLAY_SCENE],
-			["Settings", "Purple", SETTINGS_SCENE]]:
-		var b := UIStyle.button("%s" % spec[0], spec[1], 58)
+			["How to play", "Magenta", HOW_TO_PLAY_SCENE],
+			["Settings", "Purple", SETTINGS_SCENE],
+			["About", "Gold", ABOUT_SCENE]]:
+		var b := UIStyle.button("%s" % spec[0], spec[1], 54)
 		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		b.add_theme_constant_override("h_separation", 12)
 		var chevron := UIStyle.label(">", UIStyle.FONT_H2, UIStyle.ACCENTS[spec[1]], true, HORIZONTAL_ALIGNMENT_RIGHT, false)
@@ -38,6 +40,7 @@ func _ready() -> void:
 		chevron.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		b.add_child(chevron)
 		var path: String = spec[2]
+		b.set_meta("target_scene", path)
 		b.pressed.connect(func():
 			if path == GAME_SCENE:
 				GameState.clear_session()   # fresh session (report SF27)
@@ -45,10 +48,7 @@ func _ready() -> void:
 		buttons.add_child(b)
 		_buttons.append(b)
 
-	content.add_child(UIStyle.spacer(14, false))
-	var footer := UIStyle.label("A student capstone project inspired by NASA's Psyche mission",
-		UIStyle.FONT_SMALL, Color(UIStyle.TEXT_DIM, 0.85), false, HORIZONTAL_ALIGNMENT_CENTER)
-	content.add_child(footer)
+	# Credits and the Psyche disclaimer live on the About page.
 
 	_play_intro.call_deferred()
 
@@ -56,7 +56,7 @@ func _ready() -> void:
 func _build_logo() -> Control:
 	var v := UIStyle.vbox(-6)
 	v.add_child(UIStyle.heading("COSMIC", UIStyle.FONT_LOGO, UIStyle.TEXT))
-	v.add_child(UIStyle.heading("QUEST", UIStyle.FONT_LOGO + 6, UIStyle.CYAN))
+	v.add_child(UIStyle.heading("QUEST", UIStyle.FONT_LOGO + 6, UIStyle.MAGENTA))
 	var sub := UIStyle.heading("- PSYCHE -", UIStyle.FONT_H2, UIStyle.ORANGE)
 	sub.add_theme_constant_override("outline_size", 6)
 	v.add_child(UIStyle.spacer(10, false))

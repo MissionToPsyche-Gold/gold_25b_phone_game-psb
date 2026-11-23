@@ -1,21 +1,22 @@
 class_name PlayerSetupScreen
 extends UIScreen
-## Choose 2, 3 or 4 players and enter a name for each (report UF-1, UF-2,
-## SF01-SF04). Names are trimmed, must be 1-20 characters, and each invalid
-## field gets its own error message. Emits `confirmed` with the names.
+## Choose 2, 3 or 4 players (report UF-1, SF01, SF02) and a callsign for each.
+## Sponsor change (Nov 2026): there is no typing. Each player flips through
+## ready-made NASA/Psyche callsigns with < and >, so nobody can enter an
+## inappropriate nickname. Two players can never hold the same callsign.
+## Emits `confirmed` with the chosen callsigns.
 
 signal confirmed(names: PackedStringArray)
 signal back_pressed
 
 const MIN_PLAYERS := 2
 const MAX_PLAYERS := 4
-const MAX_NAME_LENGTH := 20
 
 var _count := 2
 var _count_buttons: Array[FxButton] = []
 var _rows: Array[Control] = []
-var _fields: Array[LineEdit] = []
-var _errors: Array[Label] = []
+var _name_labels: Array[Label] = []
+var _selected: Array[String] = []
 var _start: FxButton
 var _form_error: Label
 var _intro: Array = []
@@ -50,32 +51,34 @@ func _ready() -> void:
 		count_row.add_child(b)
 		_count_buttons.append(b)
 
-	var names_panel := UIStyle.panel("Cyan")
+	var names_panel := UIStyle.panel("Magenta")
 	content.add_child(names_panel)
-	var names_col := UIStyle.vbox(8)
+	var names_col := UIStyle.vbox(10)
 	names_panel.add_child(names_col)
-	names_col.add_child(UIStyle.label("Player names", UIStyle.FONT_BODY, UIStyle.CYAN, true))
+	names_col.add_child(UIStyle.label("Pick your callsigns", UIStyle.FONT_BODY, UIStyle.MAGENTA, true))
+	names_col.add_child(UIStyle.label("Tap < or > to flip through mission names.", UIStyle.FONT_SMALL, UIStyle.TEXT_DIM))
 	for i in MAX_PLAYERS:
-		var row := UIStyle.vbox(4)
+		var row := UIStyle.hbox(8)
 		names_col.add_child(row)
-		var line := UIStyle.hbox(10)
-		row.add_child(line)
-		line.add_child(UIStyle.player_chip(i, 18))
-		var field := LineEdit.new()
-		field.placeholder_text = "Player %d name" % (i + 1)
-		field.max_length = MAX_NAME_LENGTH
-		field.custom_minimum_size.y = 48
-		field.size_flags_horizontal = SIZE_EXPAND_FILL
-		field.select_all_on_focus = true
-		field.text_changed.connect(func(_t): _errors[i].visible = false)
-		field.text_submitted.connect(func(_t): _focus_next(i))
-		line.add_child(field)
-		var err := UIStyle.label("", UIStyle.FONT_SMALL, UIStyle.RED)
-		err.visible = false
-		row.add_child(err)
+		row.add_child(UIStyle.player_chip(i, 18))
+		var prev := UIStyle.button("<", "Purple", 48)
+		prev.custom_minimum_size = Vector2(48, 48)
+		prev.tooltip_text = "Previous callsign for Player %d" % (i + 1)
+		prev.pressed.connect(_cycle.bind(i, -1))
+		row.add_child(prev)
+		var name_label := UIStyle.label("", UIStyle.FONT_BODY, UIStyle.player_color(i), true, HORIZONTAL_ALIGNMENT_CENTER, false)
+		name_label.size_flags_horizontal = SIZE_EXPAND_FILL
+		name_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		name_label.clip_text = true
+		name_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+		row.add_child(name_label)
+		var next := UIStyle.button(">", "Purple", 48)
+		next.custom_minimum_size = Vector2(48, 48)
+		next.tooltip_text = "Next callsign for Player %d" % (i + 1)
+		next.pressed.connect(_cycle.bind(i, 1))
+		row.add_child(next)
 		_rows.append(row)
-		_fields.append(field)
-		_errors.append(err)
+		_name_labels.append(name_label)
 
 	_form_error = UIStyle.label("", UIStyle.FONT_SMALL, UIStyle.RED, false, HORIZONTAL_ALIGNMENT_CENTER)
 	_form_error.visible = false
@@ -92,12 +95,10 @@ func _ready() -> void:
 	reset()
 
 
-## Clear everything for a new session (report SF27 / SF28).
+## New session: 2 players, fresh random callsigns (report SF27 / SF28).
 func reset() -> void:
-	for f in _fields:
-		f.text = ""
-	for e in _errors:
-		e.visible = false
+	_selected = Callsigns.random_distinct(MAX_PLAYERS)
+	_refresh_names()
 	_form_error.visible = false
 	_set_count(MIN_PLAYERS)
 	_count_buttons[0].button_pressed = true
@@ -105,6 +106,39 @@ func reset() -> void:
 
 func on_shown() -> void:
 	pop_in(_intro)
+
+
+## Callsigns of the active players, in player order.
+func get_selected_names() -> PackedStringArray:
+	return PackedStringArray(_selected.slice(0, _count))
+
+
+## Give player `index` a callsign. Returns false (and changes nothing) if the
+## name isn't in the list or another player already has it.
+func set_callsign(index: int, callsign: String) -> bool:
+	if index < 0 or index >= MAX_PLAYERS or not Callsigns.NAMES.has(callsign):
+		return false
+	for j in MAX_PLAYERS:
+		if j != index and _selected[j] == callsign:
+			return false
+	_selected[index] = callsign
+	_refresh_names()
+	return true
+
+
+## Step player `index` to the next (dir = 1) or previous (dir = -1) free callsign.
+func _cycle(index: int, dir: int) -> void:
+	var names := Callsigns.NAMES
+	var pos := names.find(_selected[index])
+	for step in range(1, names.size()):
+		var candidate: String = names[posmod(pos + dir * step, names.size())]
+		if set_callsign(index, candidate):
+			return
+
+
+func _refresh_names() -> void:
+	for i in _name_labels.size():
+		_name_labels[i].text = _selected[i]
 
 
 func _set_count(n: int) -> void:
@@ -121,33 +155,6 @@ func show_form_error(message: String) -> void:
 	_start.shake()
 
 
-func _focus_next(i: int) -> void:
-	if i + 1 < _count:
-		_fields[i + 1].grab_focus()
-	else:
-		_fields[i].release_focus()
-
-
 func _on_start() -> void:
-	var names := PackedStringArray()
-	var first_bad := -1
-	for i in _count:
-		var n := _fields[i].text.strip_edges()
-		var problem := ""
-		if n.is_empty():
-			problem = "Enter a name for Player %d." % (i + 1)
-		elif n.length() > MAX_NAME_LENGTH:
-			problem = "Use %d characters or fewer." % MAX_NAME_LENGTH
-		_errors[i].text = problem
-		_errors[i].visible = problem != ""
-		if problem != "" and first_bad == -1:
-			first_bad = i
-		names.append(n)
-	if first_bad != -1:
-		_form_error.text = "Fix the highlighted names to launch."
-		_form_error.visible = true
-		_start.shake()
-		_fields[first_bad].grab_focus()
-		return
 	_form_error.visible = false
-	confirmed.emit(names)
+	confirmed.emit(get_selected_names())

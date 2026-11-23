@@ -7,31 +7,39 @@ extends RefCounted
 ##   SP01  layout fits a 360 x 640 portrait screen with no sideways scrolling
 ##   SP02  question/instruction text >= 16 px, touch targets >= 44 x 44 px
 
-# --- Palette (taken from the Cosmic Quest mockup) ---------------------------
-const BG := Color("#0b0820")
-const PANEL := Color("#140f2e")
-const PANEL_HI := Color("#221a4a")
-const NEBULA_A := Color("#2a1a5e")
-const NEBULA_B := Color("#3b2580")
+# --- Palette ----------------------------------------------------------------
+# Based on the NASA Psyche brand guide (V.2, 6.1.20): Black #12031d,
+# Dark Purple #302144, Purple #592651, Magenta #a53f5b, Coral #ef5966,
+# Gold #f47c33, Mustard #f9a000. Accents used for text and borders are
+# brightened where needed so they stay readable on the dark background.
+const BG := Color("#12031d")        # brand Black
+const PANEL := Color("#1d0b2c")
+const PANEL_HI := Color("#2b1440")
+const NEBULA_A := Color("#302144")  # brand Dark Purple
+const NEBULA_B := Color("#592651")  # brand Purple
 const TEXT := Color("#f4eefc")
-const TEXT_DIM := Color("#b9aee0")
-const ORANGE := Color("#f5a742")   # main action
-const CYAN := Color("#5fd4ff")     # information / trivia
-const PURPLE := Color("#9b6bff")   # navigation / secondary
-const PINK := Color("#ff7ac8")
-const GREEN := Color("#6fe08a")    # correct / success
-const RED := Color("#ff5d6c")      # wrong / failure / lives
-const GOLD := Color("#ffd36b")     # winner
+const TEXT_DIM := Color("#c2b3d6")
+const ORANGE := Color("#f47c33")    # brand Gold - main action
+const MAGENTA := Color("#e0567f")   # brand Magenta, brightened - information / trivia
+const PURPLE := Color("#9b6bff")    # navigation / secondary
+const BLUE := Color("#7aa2ff")      # player color only
+const PINK := Color("#ff7ac8")      # player color only
+const GREEN := Color("#6fe08a")     # correct / success
+const RED := Color("#ff3b3b")       # wrong / failure / lives
+const GOLD := Color("#f9a000")      # brand Mustard - winner
+## Deprecated: the turquoise accent was replaced by brand magenta (Nov 2026).
+## Kept so older code that says "Cyan" still works; it now draws magenta.
+const CYAN := MAGENTA
 
 ## Accent name -> color. Each one becomes a theme variation:
-## "<Name>Button" and "<Name>Panel" (e.g. "CyanButton", "GoldPanel").
+## "<Name>Button" and "<Name>Panel" (e.g. "MagentaButton", "GoldPanel").
 const ACCENTS := {
-	"Orange": ORANGE, "Cyan": CYAN, "Purple": PURPLE, "Pink": PINK,
-	"Green": GREEN, "Red": RED, "Gold": GOLD,
+	"Orange": ORANGE, "Magenta": MAGENTA, "Purple": PURPLE, "Blue": BLUE, "Pink": PINK,
+	"Green": GREEN, "Red": RED, "Gold": GOLD, "Cyan": MAGENTA,
 }
 
 ## Each player keeps one color for the whole game so it's obvious whose turn it is.
-const PLAYER_ACCENTS: Array[String] = ["Orange", "Cyan", "Pink", "Green"]
+const PLAYER_ACCENTS: Array[String] = ["Orange", "Blue", "Pink", "Green"]
 
 # --- Sizes ------------------------------------------------------------------
 const FONT_SMALL := 16   # smallest text allowed (SP02)
@@ -46,8 +54,10 @@ const MAX_CONTENT_WIDTH := 420   # keeps a phone-width column on tablets/desktop
 
 ## Body text, numbers and buttons: very clear digits (5 vs S, 0 vs O).
 const FONT_PATH := "res://assets/fonts/DotGothic16.ttf"
-## Logo and big headings: the chunky style from the mockup.
-const DISPLAY_FONT_PATH := "res://assets/fonts/PixelifySans.ttf"
+## Logo and big headings: chunky arcade style with clear letters (C vs O).
+const DISPLAY_FONT_PATH := "res://assets/fonts/Jersey10.ttf"
+## Jersey 10 draws small for its size, so headings are scaled up by this much.
+const DISPLAY_SCALE := 1.35
 
 static var _font: Font
 static var _bold: Font
@@ -72,11 +82,7 @@ static func bold_font() -> Font:
 
 static func display_font() -> Font:
 	if _display == null:
-		var fv := FontVariation.new()
-		fv.base_font = load(DISPLAY_FONT_PATH)
-		var ts := TextServerManager.get_primary_interface()
-		fv.variation_opentype = {ts.name_to_tag("wght"): 700}
-		_display = fv
+		_display = load(DISPLAY_FONT_PATH)
 	return _display
 
 
@@ -107,7 +113,7 @@ static func label(text: String, size := FONT_BODY, color := TEXT, bold := false,
 
 ## Big outlined heading, like the logo text.
 static func heading(text: String, size := FONT_H1, color := TEXT) -> Label:
-	var l := label(text, size, color, false, HORIZONTAL_ALIGNMENT_CENTER)
+	var l := label(text, roundi(size * DISPLAY_SCALE), color, false, HORIZONTAL_ALIGNMENT_CENTER)
 	l.add_theme_font_override("font", display_font())
 	l.add_theme_constant_override("outline_size", maxi(6, size / 4))
 	l.add_theme_color_override("font_outline_color", NEBULA_B)
@@ -206,13 +212,13 @@ static func make_theme() -> Theme:
 
 	# Text fields (player names)
 	var pad := Vector4(12, 10, 12, 10)
-	t.set_stylebox("normal", "LineEdit", box(BG, CYAN, 2, 4, pad, false))
+	t.set_stylebox("normal", "LineEdit", box(BG, MAGENTA, 2, 4, pad, false))
 	t.set_stylebox("focus", "LineEdit", box(BG, ORANGE, 2, 4, pad, true))
 	t.set_stylebox("read_only", "LineEdit", box(BG, TEXT_DIM, 2, 4, pad, false))
 	t.set_color("font_color", "LineEdit", TEXT)
 	t.set_color("font_placeholder_color", "LineEdit", Color(TEXT_DIM, 0.6))
 	t.set_color("caret_color", "LineEdit", ORANGE)
-	t.set_color("selection_color", "LineEdit", Color(CYAN, 0.35))
+	t.set_color("selection_color", "LineEdit", Color(MAGENTA, 0.35))
 	t.set_font_size("font_size", "LineEdit", FONT_BODY)
 	t.set_constant("minimum_character_width", "LineEdit", 4)
 
@@ -238,16 +244,16 @@ static func make_theme() -> Theme:
 		t.set_color(c, "CheckButton", TEXT)
 
 	# Progress bars (for HUD meters your team may add)
-	t.set_stylebox("background", "ProgressBar", box(PANEL, CYAN, 2, 2, Vector4.ZERO, false))
-	t.set_stylebox("fill", "ProgressBar", box(CYAN, CYAN, 0, 2, Vector4.ZERO, false))
+	t.set_stylebox("background", "ProgressBar", box(PANEL, MAGENTA, 2, 2, Vector4.ZERO, false))
+	t.set_stylebox("fill", "ProgressBar", box(MAGENTA, MAGENTA, 0, 2, Vector4.ZERO, false))
 	t.set_color("font_color", "ProgressBar", TEXT)
 
 	# Scrolling (long explanations on small phones)
 	t.set_stylebox("panel", "ScrollContainer", StyleBoxEmpty.new())
 	t.set_stylebox("scroll", "VScrollBar", box(Color(PANEL, 0.6), Color(0, 0, 0, 0), 0, 2, Vector4(3, 0, 3, 0), false))
 	t.set_stylebox("grabber", "VScrollBar", box(PURPLE, PURPLE, 0, 2, Vector4(3, 0, 3, 0), false))
-	t.set_stylebox("grabber_highlight", "VScrollBar", box(CYAN, CYAN, 0, 2, Vector4(3, 0, 3, 0), false))
-	t.set_stylebox("grabber_pressed", "VScrollBar", box(CYAN, CYAN, 0, 2, Vector4(3, 0, 3, 0), false))
+	t.set_stylebox("grabber_highlight", "VScrollBar", box(MAGENTA, MAGENTA, 0, 2, Vector4(3, 0, 3, 0), false))
+	t.set_stylebox("grabber_pressed", "VScrollBar", box(MAGENTA, MAGENTA, 0, 2, Vector4(3, 0, 3, 0), false))
 	return t
 
 
@@ -285,9 +291,9 @@ static func _toggle_tex(on: bool) -> ImageTexture:
 	var w := 56
 	var h := 30
 	var img := Image.create_empty(w, h, false, Image.FORMAT_RGBA8)
-	var border := CYAN if on else Color("#6b5f94")
+	var border := MAGENTA if on else Color("#6b5f94")
 	img.fill(border)
-	img.fill_rect(Rect2i(3, 3, w - 6, h - 6), PANEL.lerp(CYAN, 0.3) if on else PANEL)
+	img.fill_rect(Rect2i(3, 3, w - 6, h - 6), PANEL.lerp(MAGENTA, 0.3) if on else PANEL)
 	var knob_x := w - 25 if on else 5
 	img.fill_rect(Rect2i(knob_x, 6, 20, h - 12), border.lightened(0.2) if on else border)
 	return ImageTexture.create_from_image(img)

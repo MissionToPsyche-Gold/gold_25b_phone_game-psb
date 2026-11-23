@@ -14,6 +14,8 @@ signal pause_pressed
 const LETTERS := ["A", "B", "C", "D"]
 
 var hud: PlayerHud
+## Optional picture for the current question (hidden when there is none).
+var question_image: TextureRect
 var _scroll: ScrollContainer
 var _q_panel: PanelContainer
 var _question: Label
@@ -44,13 +46,21 @@ func _ready() -> void:
 	_scroll = UIScreen.scroll_wrap(content)
 	outer.add_child(_scroll)
 
-	_q_panel = UIStyle.panel("Cyan")
+	_q_panel = UIStyle.panel("Magenta")
 	content.add_child(_q_panel)
 	var qcol := UIStyle.vbox(8)
 	_q_panel.add_child(qcol)
-	qcol.add_child(UIStyle.label("PSYCHE TRIVIA", UIStyle.FONT_SMALL, UIStyle.CYAN, true))
+	qcol.add_child(UIStyle.label("PSYCHE TRIVIA", UIStyle.FONT_SMALL, UIStyle.MAGENTA, true))
 	_question = UIStyle.label("", UIStyle.FONT_H2, UIStyle.TEXT, true)
 	qcol.add_child(_question)
+	question_image = TextureRect.new()
+	question_image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	question_image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	question_image.custom_minimum_size = Vector2(0, 120)
+	question_image.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	question_image.mouse_filter = MOUSE_FILTER_IGNORE
+	question_image.visible = false
+	qcol.add_child(question_image)
 
 	for i in 4:
 		var b := UIStyle.button("", "Purple", 58)
@@ -87,6 +97,7 @@ func show_question(player: Dictionary, round_number: int, question: String, choi
 	_choices = choices.duplicate()
 	hud.set_player(player, round_number, false)
 	_question.text = question
+	set_question_image(null)
 	_feedback.visible = false
 	for i in 4:
 		var b := _answers[i]
@@ -97,6 +108,12 @@ func show_question(player: Dictionary, round_number: int, question: String, choi
 		b.modulate = Color.WHITE
 		b.text = "%s    %s" % [LETTERS[i], str(choices[i]) if i < choices.size() else ""]
 	_scroll.scroll_vertical = 0
+
+
+## Show a picture with the question, or hide the picture area with null.
+func set_question_image(texture: Texture2D) -> void:
+	question_image.texture = texture
+	question_image.visible = texture != null
 
 
 func on_shown() -> void:
@@ -147,7 +164,7 @@ func _on_answer(i: int) -> void:
 	_locked = true
 	for b in _answers:
 		b.mouse_filter = MOUSE_FILTER_IGNORE
-	_answers[i].accent = "Cyan"   # "selected" look until the result comes back
+	_answers[i].accent = "Magenta"   # "selected" look until the result comes back
 	answer_selected.emit(i)
 
 

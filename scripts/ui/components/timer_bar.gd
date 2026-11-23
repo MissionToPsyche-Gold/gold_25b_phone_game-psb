@@ -33,7 +33,7 @@ func _draw() -> void:
 	var bar_w := size.x - 60
 	var seg_w := bar_w / segments
 	var lit := ceili(frac * segments)
-	var c := UIStyle.CYAN
+	var c := UIStyle.MAGENTA
 	if frac < 0.5:
 		c = UIStyle.ORANGE
 	if frac < 0.25:

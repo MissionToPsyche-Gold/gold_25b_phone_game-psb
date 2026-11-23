@@ -1,10 +1,17 @@
 extends Node
-## Autoload "QuestionBank" - PLACEHOLDER so the themed trivia scene works now.
-## The trivia teammate can replace this with their own question handling.
-##   - loads data/sample_questions.json
-##   - keeps only valid questions: id, text, 4 choices, correct_index 0-3 (SD03)
-##   - never repeats a question within a session (UF-5, SF09, SF10)
+## Autoload "QuestionBank": serves trivia questions from data/trivia.json.
+##   - skips malformed records instead of crashing (SD03, test TC-014)
+##   - never repeats a question within a session (UF-5, SF09, SF10, TC-011)
+##   - picks difficulty from the player's score; if that difficulty has run
+##     out, falls back to the nearest one that still has questions (TC-012)
 ##   - forgets used questions when GameState starts a new session
+
+## Order to try when the preferred difficulty has no unused questions left.
+const FALLBACK := {
+	"Easy": ["Easy", "Medium", "Hard"],
+	"Medium": ["Medium", "Easy", "Hard"],
+	"Hard": ["Hard", "Medium", "Easy"],
+}
 
 const QUESTIONS_PATH := "res://data/trivia.json"
 
@@ -18,22 +25,20 @@ func _ready() -> void:
 			_load())
 
 
-## Returns {} when every question has been used.
+## Returns null only when every question has been used.
 func next_question(score : int) -> TriviaQuestion:
-	var pool
-	
+	var preferred := "Easy"
 	if score >= 200:
-		pool = questions.filter(func(q): return not q._used() && q.get_difficulty() == "Hard")
+		preferred = "Hard"
 	elif score >= 100:
-		pool = questions.filter(func(q): return not q._used() && q.get_difficulty() == "Medium")
-	else:
-		pool = questions.filter(func(q): return not q._used() && q.get_difficulty() == "Easy")
-	
-	if pool.is_empty():
-		return 
-	var q: TriviaQuestion = pool.pick_random()
-	q.set_used()
-	return q
+		preferred = "Medium"
+	for difficulty in FALLBACK[preferred]:
+		var pool := questions.filter(func(q): return not q._used() and q.get_difficulty() == difficulty)
+		if not pool.is_empty():
+			var q: TriviaQuestion = pool.pick_random()
+			q.set_used()
+			return q
+	return null
 
 
 func _load() -> Array:
@@ -56,7 +61,9 @@ func _load() -> Array:
 	var data: Array = json.data
 
 	for question in data:
-		var trivia_question = TriviaQuestion.new(question)
-		questions.append(trivia_question)
+		if not TriviaQuestion.is_valid_record(question):
+			push_warning("QuestionBank: skipped invalid question %s" % str(question.get("id", "?") if question is Dictionary else "?"))
+			continue
+		questions.append(TriviaQuestion.new(question))
 		
 	return questions
