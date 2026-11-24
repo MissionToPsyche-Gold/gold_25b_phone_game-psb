@@ -27,6 +27,12 @@ func _ready() -> void:
 	var mission := _section(content, "The Psyche mission", "Gold")
 	mission.add_child(UIStyle.label(AboutInfo.MISSION, UIStyle.FONT_SMALL, UIStyle.TEXT))
 
+	var disclaimer := _section(content, "Disclaimer", "Orange")
+	disclaimer.add_child(UIStyle.label(AboutInfo.DISCLAIMER, UIStyle.FONT_SMALL, UIStyle.TEXT))
+
+	var references := _section(content, "References", "Magenta")
+	references.add_child(UIStyle.label(AboutInfo.REFERENCE, UIStyle.FONT_SMALL, UIStyle.TEXT))
+
 	var back := UIStyle.button("<  Back", "Purple", 56)
 	back.pressed.connect(func(): SceneTransition.change_scene(MENU_SCENE))
 	outer.add_child(back)
